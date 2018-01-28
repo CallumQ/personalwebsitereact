@@ -1,15 +1,11 @@
 import React, { Component } from 'react';
 
-
-
 class TodoItem extends Component {
-
-
-  render() {
+  render() 
+  {
     return (
       <li className="Todo">
-        {this.props.todo.title}
-       
+        {this.props.todo.title} 
       </li>
     );
   }

@@ -3,21 +3,22 @@ import ProjectItem from './ProjectItem';
 
 class Projects extends Component {
    
-  deleteProject(id){
+  deleteProject(id)
+  {
     this.props.onDelete(id);
-
   }
 
-
-  render() {
+  render() 
+  {
     let projectItems;
-    if(this.props.projects){
-        projectItems  = this.props.projects.map(project => {
-      
-            return (
-                <ProjectItem onDelete={this.deleteProject.bind(this)} key={project.title} project={project} />
-            );
-        });
+    if(this.props.projects)
+    {
+      projectItems  = this.props.projects.map(project => 
+      {
+        return (
+          <ProjectItem onDelete={this.deleteProject.bind(this)} key={project.title} project={project} />
+        );
+      });
     }
 
     return (

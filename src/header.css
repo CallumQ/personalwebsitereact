@@ -1,7 +1,16 @@
 .brand-logo{
     height:64px;
 }
-nav{    border-bottom: 3px solid rgba(0,0,0,0.3);}
+
+nav{   
+    background: transparent;    
+    border-bottom: 1px solid rgba(0,0,0,0.3);
+}
+
 .nav-bar-right{
     display: flex;
+}
+
+.nav-bar-right a {
+    color: black;
 }
