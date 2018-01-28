@@ -1,5 +1,7 @@
-.brand-logo{
-    height:64px;
+.website-logo span svg{
+    margin-top: 1px;
+    margin-left: 5px;
+    height: 60px;
 }
 
 nav{   
