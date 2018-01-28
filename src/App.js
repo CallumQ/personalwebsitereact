@@ -1,6 +1,12 @@
 import React, { Component } from 'react';
 import Projects from './components/project';
 import AddProject from './components/addProject';
+import Home from './components/home';
+import About from'./components/about';
+import Portfolio from './components/portfolio'
+import CV from './components/cv';
+import Blog from './components/blog';
+import Contact from './components/contact';
 import Header from './components/header';
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 import uuid from 'uuid';
@@ -126,10 +132,3 @@ class App extends Component
 }
 
 export default App;
-
-const Home = () => <h3>Home </h3>;
-const About= () => <h3>About </h3>;
-const Portfolio = () => <h3>portfolio </h3>;
-const CV = () => <h3>CV </h3>;
-const Blog = () => <h3>Blog </h3>;
-const Contact = () => <h3>Contact </h3>;
