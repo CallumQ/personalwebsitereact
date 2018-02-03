@@ -1,19 +1,28 @@
 .website-logo span svg{
     margin-top: 6px;
     margin-left: 6px;
-    height: 50px;
-    
+    height: 50px;    
 }
 
 nav{   
     background: transparent;    
-    border-bottom: 1px solid rgba(0,0,0,0.3);
+    border-bottom: 1px solid rgba(0,0,0,0.02);
 }
 
+.active{
+color: #036564 ;
+
+}
 .nav-bar-right{
     display: flex;
 }
 
 .nav-bar-right a {
+    font-size: 18px;
     color: black;
+    transition: 0.3s ease all;
+}
+
+.active{
+    background-color: rgba(0,0,0,0.2) !important;  
 }
