@@ -1,21 +1,9 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink,Link  } from 'react-router-dom';
 import '../../src/header.css';
 import SVGInline from 'react-svg-inline';
 class Header extends Component {
     
-  constructor()
-  {
-    super();
-   
-    this.state = 
-    {
-      Projects : [],
-      todos: [],
-       books :[],
-    }
-  }
-  
  
   render() 
   {
@@ -26,12 +14,12 @@ class Header extends Component {
                 <SVGInline svg={svg} />
                 </Link>
                 <ul id="nav-mobile" className="right nav-bar-right">
-                    <Link to="/">Home</Link>
-                    <Link to="/about">About</Link>
-                    <Link to="/portfolio">Portfolio</Link>
-                    <Link to="/cv">CV</Link>
-                    <Link to="/blog">Blog</Link>
-                    <Link to="/contact">Contact</Link>    
+                    <NavLink to="/ " activeClassName="active">Home</NavLink>
+                    <NavLink to="/about" activeClassName="active">About</NavLink>
+                    <NavLink to="/portfolio" activeClassName="active">Portfolio</NavLink>
+                    <NavLink to="/cv" activeClassName="active">CV</NavLink>
+                    <NavLink to="/blog" activeClassName="active">Blog</NavLink>
+                    <NavLink to="/contact" activeClassName="active">Contact</NavLink>    
                 </ul>
             </div>
       </nav>
