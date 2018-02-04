@@ -1,15 +1,8 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 import '../../src/header.css';
 
-class Portfolio extends Component {
-    
-  constructor()
-  {
-    super();
-  
-  }
-  
+class Portfolio extends Component {  
+
   componentDidMount() {
     document.title = "Portfolio - Callum Quigley";
   }
@@ -17,8 +10,7 @@ class Portfolio extends Component {
   render() 
   {
     return (
-       
-        <h1>Portfolio</h1>
+      <span>todo</span>
     );
   }
 }

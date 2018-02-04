@@ -3,7 +3,6 @@ import '../../src/header.css';
 
 class Contact extends Component {
 
-  
   componentDidMount() {
     document.title = "Contact - Callum Quigley";
   }
@@ -11,8 +10,7 @@ class Contact extends Component {
   render() 
   {
     return (
-       
-        <h1>Contact</h1>
+      <span>todo</span>
     );
   }
 }

@@ -1,15 +1,7 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 import '../../src/header.css';
 
 class About extends Component {
-    
-  constructor()
-  {
-    super();
-  
-  }
-
   
   componentDidMount() {
     document.title = "About - Callum Quigley";
@@ -18,8 +10,7 @@ class About extends Component {
   render() 
   {
     return (
-       
-        <h1>About</h1>
+      <span>todo</span>
     );
   }
 }

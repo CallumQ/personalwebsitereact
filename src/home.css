@@ -1,48 +1,54 @@
-
 .mainContainer{
    
     height: 100vh;
 }
+
 .mainContainer-centerSection{
-width: 70%;
-margin: 0 auto;
+    width: 70%;
+    margin: 0 auto;
 }
-* { box-sizing: border-box; }
+
+* { 
+    box-sizing: border-box; 
+}
 
 .cvLogo{
     height: 40px;
 }
+
 .linksSection{
     border-top: 5px solid #048A81;
     font-size: 40px;
-
 }
+
 .linksSection a {
     margin-top: 20px;
     color: #BFACB5;
     transition: 0.3s ease all;
 }
+
 .linksSection a:hover{
     color: #E5D0CC;
 
 }
+
 .mainText{
     color: #E5D0CC;
     font-size: 80px;
 }
 
 body {
-
     background: rgb(24, 24, 24);
 }
+
 .particleSection{
     z-index: -10;
     position: fixed;
     width: 100vw;
     height: 100vw;
-
 }
-/* overrides default background colour of the materialize tooltip*/
-.backdrop{
-    background: rgba(4, 138, 129,0.6);
+
+/* overrides default background colour of the tooltip*/
+.tippy-tooltip, .enter{
+    background: rgba(4, 138, 129,0.6) ! important;
 }
