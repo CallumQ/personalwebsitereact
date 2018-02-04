@@ -9,6 +9,10 @@ class Portfolio extends Component {
     super();
   
   }
+  
+  componentDidMount() {
+    document.title = "Portfolio - Callum Quigley";
+  }
 
   render() 
   {

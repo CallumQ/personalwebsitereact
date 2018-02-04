@@ -11,12 +11,12 @@ body, html {
 
 nav{   
     position: fixed;
-    background: transparent;    
+    background: #048A81;    
     border-bottom: 1px solid rgba(0,0,0,0.02);
 }
 
 .active{
-color: #036564 ;
+color: #ffffff !important;
 
 }
 .nav-bar-right{
@@ -25,37 +25,10 @@ color: #036564 ;
 
 .nav-bar-right a {
     font-size: 18px;
-    color: black;
+    color:white;
     transition: 0.3s ease all;
 }
 
 .active{
-    background-color: rgba(0,0,0,0.2) !important;  
-}
-
-.mainContainer{
-   
-    height: 100vh;
-}
-.mainContainer-centerSection{
-width: 70%;
-margin: 0 auto;
-}
-* { box-sizing: border-box; }
-
-.cvLogo{
-    height: 40px;
-}
-.linksSection{
-    margin-top: 20px;
-border-top: 3px solid black;
-font-size: 40px;
-
-}
-.linksSection a {
-    margin-top: 20px;
-}
-.mainText{
-
-    font-size: 80px;
+    background-color: rgba(0, 0, 0, 0.5) !important;  
 }

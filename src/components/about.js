@@ -10,6 +10,11 @@ class About extends Component {
   
   }
 
+  
+  componentDidMount() {
+    document.title = "About - Callum Quigley";
+  }
+
   render() 
   {
     return (

@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import Projects from './components/project';
-import AddProject from './components/addProject';
 import Home from './components/home';
 import About from'./components/about';
 import Portfolio from './components/portfolio'
@@ -10,7 +8,6 @@ import Contact from './components/contact';
 import Header from './components/header';
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 import uuid from 'uuid';
-import Todos from './components/todos';
 import $ from 'jquery';
 import './App.css';
 
