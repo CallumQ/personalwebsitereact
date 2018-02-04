@@ -1,3 +1,8 @@
+body, html {
+    height: 100%;
+  }
+  
+
 .website-logo span svg{
     margin-top: 6px;
     margin-left: 6px;
@@ -5,6 +10,7 @@
 }
 
 nav{   
+    position: fixed;
     background: transparent;    
     border-bottom: 1px solid rgba(0,0,0,0.02);
 }
@@ -25,4 +31,31 @@ color: #036564 ;
 
 .active{
     background-color: rgba(0,0,0,0.2) !important;  
+}
+
+.mainContainer{
+   
+    height: 100vh;
+}
+.mainContainer-centerSection{
+width: 70%;
+margin: 0 auto;
+}
+* { box-sizing: border-box; }
+
+.cvLogo{
+    height: 40px;
+}
+.linksSection{
+    margin-top: 20px;
+border-top: 3px solid black;
+font-size: 40px;
+
+}
+.linksSection a {
+    margin-top: 20px;
+}
+.mainText{
+
+    font-size: 80px;
 }
