@@ -21,7 +21,7 @@ class Home extends Component {
           <Particles className="particleSection" params={{
               "particles": {
                 "number": {
-                  "value": 200,
+                  "value": 180,
                   "density": {
                     "enable": true,
                     "value_area": 500
@@ -74,11 +74,11 @@ class Home extends Component {
                 },
                 "move": {
                   "enable": true,
-                  "speed": 0.2,
+                  "speed": 0.1,
                   "direction": "none",
                   "random": true,
                   "straight": false,
-                  "out_mode": "out",
+                  "out_mode": "in",
                   "bounce": true,
                   "attract": {
                     "enable": false,
@@ -103,7 +103,7 @@ class Home extends Component {
                   </Tooltip>
                   
                   <Tooltip title="LinkedIn" position="bottom" distance="5" style={inlinestyle}>
-                    <a href="http://callumquigley.com/Callum%20Quigley%20CV.pdf"> <i className="icon-linkedin-circled"></i></a> 
+                    <a href="https://www.linkedin.com/in/callum-quigley-563194136/"> <i className="icon-linkedin-circled"></i></a> 
                   </Tooltip>
 
                   <Tooltip title="CV" position="bottom" distance="5" style={inlinestyle}>
