@@ -50,7 +50,60 @@ body {
     height: 100vw;
 }
 
+.device-container{
+    width: 400px !important;
+}
+
+.device-container span{
+
+}
+
 /* overrides default background colour of the tooltip*/
 .tippy-tooltip, .enter{
     background: rgba(4, 138, 129, 0.6) ! important;
 }
+.laptop-clip-path{      
+    clip-path: url(#laptopClipPath);    
+}             .phone-clip-path{      
+    clip-path: url(#phoneClipPath);    
+}    
+
+
+.svg-scroll{	
+    transition: all 2000ms ease;   
+}     
+.shadow {
+    /* Use -webkit- only if supporting: Chrome < 54, iOS < 9.3, Android < 4.4.4 */
+    -webkit-filter: drop-shadow( -5px -5px 5px #000 ); 
+            filter: drop-shadow( -5px -5px 5px #000 );
+}
+.svg-scroll-on{	
+    transition: all 10000ms ease;       
+    transform: translate(0px, -1000px);
+}   
+            .cls-1 {
+                fill: #f2f2f2;
+            }
+
+            .cls-2 {
+                fill: none;
+            }
+
+            .cls-3 {
+                fill: #fdffff;
+            }
+
+            .cls-4 {
+                fill: #048a81;
+            }
+
+            .cls-5 {
+                fill: #fff;
+                stroke: #000505;
+                stroke-miterlimit: 10;
+                stroke-width: 0.25px;
+            }
+            .mobileLaptopSVGContainer{
+            
+             
+            }
