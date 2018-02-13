@@ -1,12 +1,10 @@
 .mainContainer{
-   
     height: 100vh;
 }
 
 .mainContainer-centerSection{
     width: 50%;
     margin: 0 auto;
-
 }
 
 * { 
@@ -30,18 +28,15 @@
 
 .linksSection a:hover{
     color: rgb(68, 68, 68);
-
 }
 
 .mainText{
     color: black;
     font-size: 80px;
-
 }
 
 body {
     background: white;  /* fallback for old browsers */
-   
 }
 
 .particleSection{
@@ -71,43 +66,24 @@ body {
 .svg-scroll{	
     animation : scroll-svg 10s infinite;
     animation-delay: 0.5s;
-
 }
-    @keyframes scroll-svg {
-        0% {  transform: translate(0px, -0px);
-        }
-        90% {  transform: translate(0px, -890px);}
-        100% {  transform: translate(0px, -0px);
-        }
-      
-   
-    }
-
 
 .svg-scroll-on{	
     transition-delay: 5s;
     transition: all 10000ms ease;       
     transform: translate(0px, -1000px);
 }   
-.cls-1 {
-    fill: #f2f2f2;
-}
-
-.cls-2 {
-    fill: none;
-}
-
-.cls-3 {
+.svg-device-background {
     fill: #fdffff;
  }
 
- .cls-4 {
-    fill: #014c8f 
+ .svg-device-bars {
+    fill: #014c8f;
  }
 
- .cls-5 {
-    fill: #fff;
-    stroke: #000505;
-    stroke-miterlimit: 10;
-    stroke-width: 0.25px;
- }
+ @keyframes scroll-svg {
+    0% {  transform: translate(0px, -0px);}
+    90% {  transform: translate(0px, -890px);}
+    95% {  transform: translate(0px, -0px);
+    }
+}
