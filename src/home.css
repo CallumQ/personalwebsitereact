@@ -4,8 +4,9 @@
 }
 
 .mainContainer-centerSection{
-    width: 70%;
+    width: 50%;
     margin: 0 auto;
+
 }
 
 * { 
@@ -17,30 +18,30 @@
 }
 
 .linksSection{
-    border-top: 5px solid #048A81;
+    border-top: 5px solid #014c8f;
     font-size: 40px;
 }
 
 .linksSection a {
     margin-top: 20px;
-    color: #BFACB5;
+    color: black;
     transition: 0.3s ease all;
 }
 
 .linksSection a:hover{
-    color: #E5D0CC;
+    color: rgb(68, 68, 68);
 
 }
 
 .mainText{
-    color: #E5D0CC;
+    color: black;
     font-size: 80px;
+
 }
 
 body {
-    background: #000000;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to top, #434343, #000000);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to top, #434343, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */    
+    background: white;  /* fallback for old browsers */
+   
 }
 
 .particleSection{
@@ -56,7 +57,7 @@ body {
 
 /* overrides default background colour of the tooltip*/
 .tippy-tooltip, .enter{
-    background: rgba(4, 138, 129, 0.6) ! important;
+    background: #014c8f ! important;
 }
 
 .laptop-clip-path{      
@@ -68,10 +69,23 @@ body {
 }    
 
 .svg-scroll{	
-    transition: all 2000ms ease;   
+    animation : scroll-svg 10s infinite;
+    animation-delay: 0.5s;
+
 }
+    @keyframes scroll-svg {
+        0% {  transform: translate(0px, -0px);
+        }
+        90% {  transform: translate(0px, -890px);}
+        100% {  transform: translate(0px, -0px);
+        }
+      
+   
+    }
+
 
 .svg-scroll-on{	
+    transition-delay: 5s;
     transition: all 10000ms ease;       
     transform: translate(0px, -1000px);
 }   
@@ -88,7 +102,7 @@ body {
  }
 
  .cls-4 {
-    fill: #048a81;
+    fill: #014c8f 
  }
 
  .cls-5 {
