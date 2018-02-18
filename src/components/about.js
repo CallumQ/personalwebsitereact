@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
 import '../../src/header.css';
 import '../../src/about.css';
-
+import graduationPicture from '../graduationPicture.jpg';
 class About extends Component {
     
   constructor()
@@ -28,8 +28,10 @@ class About extends Component {
       </div>
       <div className="col s4">
       <div className="image-container">
-      <div className="image-container-image"><img src="/public/graduationPicture.jpg"></img></div>
+      <div className="image-container-image"><img src={graduationPicture}></img>
       <div className="image-container-text">Graduation, June 2017</div>
+      </div>
+
       </div>
       </div>
       </div>
