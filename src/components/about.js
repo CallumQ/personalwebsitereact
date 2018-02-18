@@ -23,12 +23,12 @@ class About extends Component {
       <p> experience experience experience</p>
       <p>proof of work proof of work proof of work </p>
       <div className="buttonSection">
-      <div className="button"> <NavLink to="/portfolio"> Portfolio</NavLink>    </div>
-      <div className="button"> <NavLink to="/contact"> Contact</NavLink>    </div></div>
+      <NavLink to="/portfolio" className="waves-effect waves-light btn"> Portfolio</NavLink>   
+      <NavLink to="/contact" className="waves-effect waves-light btn"> Contact</NavLink>    </div>
       </div>
       <div className="col s4">
       <div className="image-container">
-      <div className="image-container-image"><img src="../../public/graduationPicture.jpg"></img></div>
+      <div className="image-container-image"><img src="/public/graduationPicture.jpg"></img></div>
       <div className="image-container-text">Graduation, June 2017</div>
       </div>
       </div>

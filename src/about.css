@@ -12,8 +12,19 @@ padding-top: 40px;
 display: inline-flex;
 }
 
-.buttonSection .button{
-    border: 1px solid black;
-    padding: 5px;
+.buttonSection a{
     margin-right: 10px;
+}
+
+.btn{
+    background: #014c8f;
+    transition: all 0.5s ease;
+}
+
+.btn:hover{
+    background: #026ecc;
+}
+
+.button a, .button a:visited, .button a:active{
+    color: white;
 }
