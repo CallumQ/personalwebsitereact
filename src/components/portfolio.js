@@ -171,10 +171,23 @@ class Portfolio extends Component {
   {
     return (
       <div className="project-container">
+      <div className="row no-padding pos-relative">
+      <div className="col s1">           
+      </div>
+      <div className="col s10">
+      <div className="row no-padding pos-relative">
+      <div className="col s1"> <h1>Projects</h1></div>
+      <div className= "col s10"></div>
+      <div className="col s1 project-counter">showing {(this.state.itemsPerPage*this.state.pageNo- this.state.itemsPerPage)+1}-{this.state.itemsPerPage*this.state.pageNo} of {this.state.projects.length}</div>
+      </div></div>
+      </div>
+      <div className="col s1"></div>
         <div className="row">
           <div className="col s1"></div>
-          <div className="col s10">
-            <h1>Projects</h1>
+          <div className="col s10 pos-relative">
+          <div className="project-container-info">
+
+            <div className="project-counter"></div></div>
             <div className="row">
             <ProjectContainer projects={this.updateProjects()}/>             
             </div>
