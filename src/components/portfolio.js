@@ -1,135 +1,193 @@
 import React, { Component } from 'react';
 import '../../src/portfolio.css';
-import Project from './project';
+import ProjectContainer from './ProjectContainer';
+import Pagination from'./pagination';
 
-const projects = [
-  {
-    name :"Project One",
-    summary : "A simple web browser written in C# which performs HTTP requests.",
-    description : "this is a description this is a description this is a description this is a description this is a description this is a description ",
-    previewImage: "https://lh3.googleusercontent.com/0-BzaWtxoAnsBjQ_wzUcKxyF07XE7v2Kkg1ogPVUdzmQpvaz118uHQEGU6BdtzJuzfo=h556",
-    technology:["C","JAVA"],
-    url: "/this/will/point/to/a/endpoint",
-  },{
-    name :"Project One",
-    summary : "A simple web browser written in C# which performs HTTP requests.",
-    description : "this is a description this is a description this is a description this is a description this is a description this is a description ",
-    previewImage: "https://lh3.googleusercontent.com/0-BzaWtxoAnsBjQ_wzUcKxyF07XE7v2Kkg1ogPVUdzmQpvaz118uHQEGU6BdtzJuzfo=h556",
-    technology:["C","JAVA"],
-    url: "/this/will/point/to/a/endpoint",
-  },{
-    name :"Project One",
-    summary : "A simple web browser written in C# which performs HTTP requests.",
-    description : "this is a description this is a description this is a description this is a description this is a description this is a description ",
-    previewImage: "https://lh3.googleusercontent.com/0-BzaWtxoAnsBjQ_wzUcKxyF07XE7v2Kkg1ogPVUdzmQpvaz118uHQEGU6BdtzJuzfo=h556",
-    technology:["C","JAVA"],
-    url: "/this/will/point/to/a/endpoint",
-  },{
-    name :"Project One",
-    summary : "A simple web browser written in C# which performs HTTP requests.",
-    description : "this is a description this is a description this is a description this is a description this is a description this is a description ",
-    previewImage: "https://lh3.googleusercontent.com/0-BzaWtxoAnsBjQ_wzUcKxyF07XE7v2Kkg1ogPVUdzmQpvaz118uHQEGU6BdtzJuzfo=h556",
-    technology:["C","JAVA"],
-    url: "/this/will/point/to/a/endpoint",
-  },{
-    name :"Project One",
-    summary : "A simple web browser written in C# which performs HTTP requests.",
-    description : "this is a description this is a description this is a description this is a description this is a description this is a description ",
-    previewImage: "https://lh3.googleusercontent.com/0-BzaWtxoAnsBjQ_wzUcKxyF07XE7v2Kkg1ogPVUdzmQpvaz118uHQEGU6BdtzJuzfo=h556",
-    technology:["C","JAVA"],
-    url: "/this/will/point/to/a/endpoint",
-  },{
-    name :"Project One",
-    summary : "A simple web browser written in C# which performs HTTP requests.",
-    description : "this is a description this is a description this is a description this is a description this is a description this is a description ",
-    previewImage: "https://lh3.googleusercontent.com/0-BzaWtxoAnsBjQ_wzUcKxyF07XE7v2Kkg1ogPVUdzmQpvaz118uHQEGU6BdtzJuzfo=h556",
-    technology:["C","JAVA"],
-    url: "/this/will/point/to/a/endpoint",
-  },
-  {
-    name :"Project two",
-    summary : "A simple web browser written in C# which performs HTTP requests.",
-    description : "this is a description",
-    previewImage: "https://lh3.googleusercontent.com/0-BzaWtxoAnsBjQ_wzUcKxyF07XE7v2Kkg1ogPVUdzmQpvaz118uHQEGU6BdtzJuzfo=h556",
-    technology:["C","CPLUSPLUS"],
-    url: "/this/will/point/to/a/endpoint",
-  },
-  {
-    name :"Project three",
-    summary : "A simple web browser written in C# which performs HTTP requests.",
-    description : "this is a description",
-    previewImage: "https://lh3.googleusercontent.com/0-BzaWtxoAnsBjQ_wzUcKxyF07XE7v2Kkg1ogPVUdzmQpvaz118uHQEGU6BdtzJuzfo=h556",
-    technology:["REACT","CSS","HTML5","JAVASCRIPT","MONGODB"],
-    url: "/this/will/point/to/a/endpoint",
-  },
 
-]
-let NoOfItems = 0;
-let pageNo = 0;
-let itemsOnPage = 8;
 class Portfolio extends Component {  
   
   constructor(){
     super();
     this.state = {
-      projects,
-      NoOfItems,
-      itemsOnPage,
-      pageNo
+      pageNo : 1,
+      itemsPerPage : 8,
+      noOfProjects : 8,
+      projects : [
+        {
+          name :"zero",
+          summary : "A simple web browser written in C# which performs HTTP requests.",
+          description : "this is a description this is a description this is a description this is a description this is a description this is a description ",
+          previewImage: "https://lh3.googleusercontent.com/0-BzaWtxoAnsBjQ_wzUcKxyF07XE7v2Kkg1ogPVUdzmQpvaz118uHQEGU6BdtzJuzfo=h556",
+          technology:["C","JAVA"],
+          url: "/this/will/point/to/a/endpoint",
+        },{
+          name :"one",
+          summary : "A simple web browser written in C# which performs HTTP requests.",
+          description : "this is a description this is a description this is a description this is a description this is a description this is a description ",
+          previewImage: "https://lh3.googleusercontent.com/0-BzaWtxoAnsBjQ_wzUcKxyF07XE7v2Kkg1ogPVUdzmQpvaz118uHQEGU6BdtzJuzfo=h556",
+          technology:["C","JAVA"],
+          url: "/this/will/point/to/a/endpoint",
+        },{
+          name :"two",
+          summary : "A simple web browser written in C# which performs HTTP requests.",
+          description : "this is a description this is a description this is a description this is a description this is a description this is a description ",
+          previewImage: "https://lh3.googleusercontent.com/0-BzaWtxoAnsBjQ_wzUcKxyF07XE7v2Kkg1ogPVUdzmQpvaz118uHQEGU6BdtzJuzfo=h556",
+          technology:["C","JAVA"],
+          url: "/this/will/point/to/a/endpoint",
+        },{
+          name :"three",
+          summary : "A simple web browser written in C# which performs HTTP requests.",
+          description : "this is a description this is a description this is a description this is a description this is a description this is a description ",
+          previewImage: "https://lh3.googleusercontent.com/0-BzaWtxoAnsBjQ_wzUcKxyF07XE7v2Kkg1ogPVUdzmQpvaz118uHQEGU6BdtzJuzfo=h556",
+          technology:["C","JAVA"],
+          url: "/this/will/point/to/a/endpoint",
+        },{
+          name :"four",
+          summary : "A simple web browser written in C# which performs HTTP requests.",
+          description : "this is a description this is a description this is a description this is a description this is a description this is a description ",
+          previewImage: "https://lh3.googleusercontent.com/0-BzaWtxoAnsBjQ_wzUcKxyF07XE7v2Kkg1ogPVUdzmQpvaz118uHQEGU6BdtzJuzfo=h556",
+          technology:["C","JAVA"],
+          url: "/this/will/point/to/a/endpoint",
+        },{
+          name :"five",
+          summary : "A simple web browser written in C# which performs HTTP requests.",
+          description : "this is a description this is a description this is a description this is a description this is a description this is a description ",
+          previewImage: "https://lh3.googleusercontent.com/0-BzaWtxoAnsBjQ_wzUcKxyF07XE7v2Kkg1ogPVUdzmQpvaz118uHQEGU6BdtzJuzfo=h556",
+          technology:["C","JAVA"],
+          url: "/this/will/point/to/a/endpoint",
+        },
+        {
+          name :"six",
+          summary : "A simple web browser written in C# which performs HTTP requests.",
+          description : "this is a description",
+          previewImage: "https://lh3.googleusercontent.com/0-BzaWtxoAnsBjQ_wzUcKxyF07XE7v2Kkg1ogPVUdzmQpvaz118uHQEGU6BdtzJuzfo=h556",
+          technology:["C","CPLUSPLUS"],
+          url: "/this/will/point/to/a/endpoint",
+        },
+        {
+          name :"seven",
+          summary : "A simple web browser written in C# which performs HTTP requests.",
+          description : "this is a description",
+          previewImage: "https://lh3.googleusercontent.com/0-BzaWtxoAnsBjQ_wzUcKxyF07XE7v2Kkg1ogPVUdzmQpvaz118uHQEGU6BdtzJuzfo=h556",
+          technology:["REACT","CSS","HTML5","JAVASCRIPT","MONGODB"],
+          url: "/this/will/point/to/a/endpoint",
+        },{
+          name :"eight",
+          summary : "A simple web browser written in C# which performs HTTP requests.",
+          description : "this is a description this is a description this is a description this is a description this is a description this is a description ",
+          previewImage: "https://lh3.googleusercontent.com/0-BzaWtxoAnsBjQ_wzUcKxyF07XE7v2Kkg1ogPVUdzmQpvaz118uHQEGU6BdtzJuzfo=h556",
+          technology:["C","JAVA"],
+          url: "/this/will/point/to/a/endpoint",
+        },{
+          name :"nine",
+          summary : "A simple web browser written in C# which performs HTTP requests.",
+          description : "this is a description this is a description this is a description this is a description this is a description this is a description ",
+          previewImage: "https://lh3.googleusercontent.com/0-BzaWtxoAnsBjQ_wzUcKxyF07XE7v2Kkg1ogPVUdzmQpvaz118uHQEGU6BdtzJuzfo=h556",
+          technology:["C","JAVA"],
+          url: "/this/will/point/to/a/endpoint",
+        },{
+          name :"ten",
+          summary : "A simple web browser written in C# which performs HTTP requests.",
+          description : "this is a description this is a description this is a description this is a description this is a description this is a description ",
+          previewImage: "https://lh3.googleusercontent.com/0-BzaWtxoAnsBjQ_wzUcKxyF07XE7v2Kkg1ogPVUdzmQpvaz118uHQEGU6BdtzJuzfo=h556",
+          technology:["C","JAVA"],
+          url: "/this/will/point/to/a/endpoint",
+        },{
+          name :"eleven",
+          summary : "A simple web browser written in C# which performs HTTP requests.",
+          description : "this is a description this is a description this is a description this is a description this is a description this is a description ",
+          previewImage: "https://lh3.googleusercontent.com/0-BzaWtxoAnsBjQ_wzUcKxyF07XE7v2Kkg1ogPVUdzmQpvaz118uHQEGU6BdtzJuzfo=h556",
+          technology:["C","JAVA"],
+          url: "/this/will/point/to/a/endpoint",
+        },{
+          name :"twelve",
+          summary : "A simple web browser written in C# which performs HTTP requests.",
+          description : "this is a description this is a description this is a description this is a description this is a description this is a description ",
+          previewImage: "https://lh3.googleusercontent.com/0-BzaWtxoAnsBjQ_wzUcKxyF07XE7v2Kkg1ogPVUdzmQpvaz118uHQEGU6BdtzJuzfo=h556",
+          technology:["C","JAVA"],
+          url: "/this/will/point/to/a/endpoint",
+        },{
+          name :"thirteen",
+          summary : "A simple web browser written in C# which performs HTTP requests.",
+          description : "this is a description this is a description this is a description this is a description this is a description this is a description ",
+          previewImage: "https://lh3.googleusercontent.com/0-BzaWtxoAnsBjQ_wzUcKxyF07XE7v2Kkg1ogPVUdzmQpvaz118uHQEGU6BdtzJuzfo=h556",
+          technology:["C","JAVA"],
+          url: "/this/will/point/to/a/endpoint",
+        },
+        {
+          name :"fourteen",
+          summary : "A simple web browser written in C# which performs HTTP requests.",
+          description : "this is a description",
+          previewImage: "https://lh3.googleusercontent.com/0-BzaWtxoAnsBjQ_wzUcKxyF07XE7v2Kkg1ogPVUdzmQpvaz118uHQEGU6BdtzJuzfo=h556",
+          technology:["C","CPLUSPLUS"],
+          url: "/this/will/point/to/a/endpoint",
+        },
+        {
+          name :"fifteen",
+          summary : "A simple web browser written in C# which performs HTTP requests.",
+          description : "this is a description",
+          previewImage: "https://lh3.googleusercontent.com/0-BzaWtxoAnsBjQ_wzUcKxyF07XE7v2Kkg1ogPVUdzmQpvaz118uHQEGU6BdtzJuzfo=h556",
+          technology:["REACT","CSS","HTML5","JAVASCRIPT"],
+          url: "/this/will/point/to/a/endpoint",
+        },
+      
+      ],
+      sortedProjects :[],
     }
-    this.upPage = this.upPage.bind(this);
-    this.downPage = this.downPage.bind(this);
+
+    this.pageUp = this.pageUp.bind(this);
+    this.pageDown = this.pageDown.bind(this);
+
   }
 
-  upPage(){
+  pageUp(){
+    if (this.state.pageNo < this.state.projects.length / this.state.itemsPerPage){
+
     
-    this.setState({pageNo :pageNo++});
-  }
+        this.setState((prevState) => {return {pageNo: prevState.pageNo + 1}})
+        this.updateProjects();
+    }  }
+  pageDown(){
+    if(this.state.pageNo > 1){
+    this.setState((prevState) => {return {pageNo: prevState.pageNo - 1}})
+    this.updateProjects();
+}}
 
-  downPage(){
-
-    this.setState({pageNo : pageNo--});
+  updateProjects(){
+    let tempArray = [];
+    let offset = this.state.itemsPerPage*this.state.pageNo;
+   
+      tempArray = this.state.projects.slice(offset- this.state.itemsPerPage,offset);
+   return tempArray;
   }
 
   componentDidMount() {
     document.title = "Portfolio - Callum Quigley";
-  }
-  createItems(){
-    let projectArray = [];
-    for (let i = this.state.itemsOnPage*this.state.pageNo; i <this.state.itemsOnPage; i++){
-      projectArray.push( <Project key={projects[i].name} properties={projects[i]}/>);
-
-    }
-    return projectArray;
 
   }
   
-    render() 
-    {
-      return (
-        <div className="project-container">
-          <div className="row">
-            <div className="col s1"></div>
-            <div className="col s10">
-              <h1>Projects</h1>
-              <div className="row">
-              {this.createItems()}
-               
-              </div>
-              
+  
+  render() 
+  {
+    return (
+      <div className="project-container">
+        <div className="row">
+          <div className="col s1"></div>
+          <div className="col s10">
+            <h1>Projects</h1>
+            <div className="row">
+            <ProjectContainer projects={this.updateProjects()}/>             
             </div>
-            <div className="col s1"></div>  
+            
           </div>
-
-          <div className="row center-align fixed-bottom">
-              <ul class="pagination ">
-    <li class="disabled"><a href="#!" onClick={this.downPage}><i class="material-icons">chevron_left</i></a></li>
-    <li class="active"><a href="#!">{this.state.pageNo+1}</a></li>
-    <li class="waves-effect"><a href="#!" onClick={this.upPage}><i class="material-icons">chevron_right</i></a></li>
-  </ul>
-              </div>  
+          <div className="col s1"></div>  
         </div>
-      );
+
+        <div className="row center-align fixed-bottom">
+        <Pagination pageNo={this.state.pageNo} pageUp={this.pageUp.bind(this)} pageDown={this.pageDown.bind(this)} pageDownClass={(this.state.pageNo <= 1)?"disabled":"waves-effect"} pageUpClass={(this.state.pageNo < this.state.projects.length / this.state.itemsPerPage)?"waves-effect":"disabled"} />
+            </div>  
+      </div>
+    );
     }
   
 }
