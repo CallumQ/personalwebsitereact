@@ -43,7 +43,7 @@ class Portfolio extends Component {
   componentDidMount() {
     document.title = "Portfolio - Callum Quigley";
    
-    }
+  }
   
     render() 
     {
@@ -52,17 +52,14 @@ class Portfolio extends Component {
           <div className="row">
           <div className="col s1"></div>
             <div className="col s10">
-            <h1>Projects</h1>
+              <h1>Projects</h1>
             <div className="row">
-            
-            {this.state.projects.map(project => <Project key={project.name} properties={project}/>)}
-         
-            </div>
-            
-            </div>
-            <div className="col s1"></div>
-          
-        </div></div>
+              {this.state.projects.map(project => <Project key={project.name} properties={project}/>)}
+            </div>  
+          </div>
+          <div className="col s1"></div>  
+          </div>
+        </div>
       );
     }
   

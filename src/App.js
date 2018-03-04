@@ -7,9 +7,7 @@ import Blog from './components/blog';
 import Contact from './components/contact';
 import Header from './components/header';
 
-
 import { BrowserRouter as Router, Route } from 'react-router-dom'
-
 
 class App extends Component{
   

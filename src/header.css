@@ -15,8 +15,7 @@ nav{
 }
 
 .active{
-color: #ffffff !important;
-
+    color: #ffffff !important;
 }
 .nav-bar-right{
     display: flex;
