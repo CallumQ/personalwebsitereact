@@ -1,0 +1,14 @@
+.card-action{
+    display: inline-block;
+}
+
+
+.left-section{
+    float: left;
+}
+
+.right-section{
+    float: right;
+    margin-right:-24px;
+    height: 36px;
+}

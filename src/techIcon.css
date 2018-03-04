@@ -1,0 +1,12 @@
+.tech-icon-container, .language-text{
+    display: inline;
+
+}
+
+.language-text{
+    margin-right:10px;
+}
+
+.tech-icon svg {
+    height: 30px;
+}
