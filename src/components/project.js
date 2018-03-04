@@ -4,8 +4,7 @@ import TechnologyItem from './technologyItem';
 import { NavLink } from 'react-router-dom';
 class Project extends Component {  
 
-  render() 
-  {
+  render() {
     return (
       <div className="col s3">
         <div className="card large hoverable sticky-action">
@@ -42,7 +41,6 @@ class Project extends Component {
       </div>
       );
     }
-    
 }
 
 export default Project;

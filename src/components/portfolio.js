@@ -3,10 +3,9 @@ import '../../src/portfolio.css';
 import ProjectContainer from './ProjectContainer';
 import Pagination from'./pagination';
 
-
 class Portfolio extends Component {  
   
-  constructor(){
+  constructor() {
     super();
     this.state = {
       pageNo : 1,
@@ -137,72 +136,63 @@ class Portfolio extends Component {
 
     this.pageUp = this.pageUp.bind(this);
     this.pageDown = this.pageDown.bind(this);
-
   }
 
-  pageUp(){
+  pageUp() {
     if (this.state.pageNo < this.state.projects.length / this.state.itemsPerPage){
+      this.setState((prevState) => {return {pageNo: prevState.pageNo + 1}})
+      this.updateProjects();
+    }  
+  }
 
-    
-        this.setState((prevState) => {return {pageNo: prevState.pageNo + 1}})
-        this.updateProjects();
-    }  }
-  pageDown(){
+  pageDown() {
     if(this.state.pageNo > 1){
-    this.setState((prevState) => {return {pageNo: prevState.pageNo - 1}})
-    this.updateProjects();
-}}
+      this.setState((prevState) => {return {pageNo: prevState.pageNo - 1}})
+      this.updateProjects();    
+    }
+  }
 
   updateProjects(){
-    let tempArray = [];
-    let offset = this.state.itemsPerPage*this.state.pageNo;
-   
-      tempArray = this.state.projects.slice(offset- this.state.itemsPerPage,offset);
-   return tempArray;
+    let offset = this.state.itemsPerPage*this.state.pageNo; 
+    
+    return this.state.projects.slice(offset- this.state.itemsPerPage,offset);
   }
 
   componentDidMount() {
     document.title = "Portfolio - Callum Quigley";
-
   }
   
-  
-  render() 
-  {
+  render() {
     return (
       <div className="project-container">
-      <div className="row no-padding pos-relative">
-      <div className="col s1">           
-      </div>
-      <div className="col s10">
-      <div className="row no-padding pos-relative">
-      <div className="col s1"> <h1>Projects</h1></div>
-      <div className= "col s10"></div>
-      <div className="col s1 project-counter">showing {(this.state.itemsPerPage*this.state.pageNo- this.state.itemsPerPage)+1}-{this.state.itemsPerPage*this.state.pageNo} of {this.state.projects.length}</div>
-      </div></div>
-      </div>
-      <div className="col s1"></div>
+        <div className="row no-padding pos-relative">
+          <div className="col s1"></div>
+          <div className="col s10">
+            <div className="row no-padding pos-relative">
+              <div className="col s1"><h1>Projects</h1></div>
+              <div className= "col s10"></div>
+              <div className="col s1 project-counter">
+                showing {(this.state.itemsPerPage*this.state.pageNo- this.state.itemsPerPage)+1}-{this.state.itemsPerPage*this.state.pageNo} of {this.state.projects.length}
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="col s1"></div>
         <div className="row">
           <div className="col s1"></div>
-          <div className="col s10 pos-relative">
-          <div className="project-container-info">
-
-            <div className="project-counter"></div></div>
-            <div className="row">
-            <ProjectContainer projects={this.updateProjects()}/>             
+            <div className="col s10 pos-relative">
+              <div className="row">
+                <ProjectContainer projects={this.updateProjects()}/>             
+              </div>  
             </div>
-            
-          </div>
-          <div className="col s1"></div>  
+            <div className="col s1"></div>  
         </div>
-
         <div className="row center-align fixed-bottom">
-        <Pagination pageNo={this.state.pageNo} pageUp={this.pageUp.bind(this)} pageDown={this.pageDown.bind(this)} pageDownClass={(this.state.pageNo <= 1)?"disabled":"waves-effect"} pageUpClass={(this.state.pageNo < this.state.projects.length / this.state.itemsPerPage)?"waves-effect":"disabled"} />
-            </div>  
+          <Pagination pageNo={this.state.pageNo} pageUp={this.pageUp.bind(this)} pageDown={this.pageDown.bind(this)} pageDownClass={(this.state.pageNo <= 1)?false:true} pageUpClass={(this.state.pageNo < this.state.projects.length / this.state.itemsPerPage)?true:false} />
+        </div>  
       </div>
     );
-    }
-  
+  }
 }
 
 export default Portfolio;

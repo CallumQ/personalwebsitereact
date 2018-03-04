@@ -1,43 +1,41 @@
 import React, { Component } from 'react';
 import SVGInline from 'react-svg-inline';
 import '../../src/techIcon.css';
-import {
-    Tooltip,
-  } from 'react-tippy';
+import {Tooltip} from 'react-tippy';
 
 const techNames = {
-    AWS : "Amazon Web Services",
-    ANDROID : "Android",
-    ANGULAR : "Angular",
-    APACHE : "Apache",
-    APPCELERATOR : "Appcelerator",
-    APPLE : "Apple",
-    ATOM : "Atom text editor",
-    BACKBONE: "Backbone",
-    BOOTSTRAP : "Bootstrap",
-    C : "C",
-    CHROME : "Google Chrome",
-    CPLUSPLUS : "C++",
-    CSHARP : "C#",
-    CSS : "CSS",
-    FOUNDATION : "Foundation 6",
-    GIT : "Git",
-    GITHUB : "Github",
-    GO : "Go",
-    HTML5 : "HTML5",
-    JAVA : "Java",
-    JAVASCRIPT : "Javascript (ECMA6)",
-    JQUERY : "Jquery",
-    LARAVEL : "Laravel",
-    LESS : "Less",
-    LINKEDIN : "LinkedIn",
-    MONGODB : "MongoDB",
-    MYSQL : "MySQL",
-    NODE : "Node.js",
-    PHP : "PHP",
-    PYTHON : "Python",
-    RAILS : "Rails",
-    REACT : "React"
+  AWS : "Amazon Web Services",
+  ANDROID : "Android",
+  ANGULAR : "Angular",
+  APACHE : "Apache",
+  APPCELERATOR : "Appcelerator",
+  APPLE : "Apple",
+  ATOM : "Atom text editor",
+  BACKBONE: "Backbone",
+  BOOTSTRAP : "Bootstrap",
+  C : "C",
+  CHROME : "Google Chrome",
+  CPLUSPLUS : "C++",
+  CSHARP : "C#",
+  CSS : "CSS",
+  FOUNDATION : "Foundation 6",
+  GIT : "Git",
+  GITHUB : "Github",
+  GO : "Go",
+  HTML5 : "HTML5",
+  JAVA : "Java",
+  JAVASCRIPT : "Javascript (ECMA6)",
+  JQUERY : "Jquery",
+  LARAVEL : "Laravel",
+  LESS : "Less",
+  LINKEDIN : "LinkedIn",
+  MONGODB : "MongoDB",
+  MYSQL : "MySQL",
+  NODE : "Node.js",
+  PHP : "PHP",
+  PYTHON : "Python",
+  RAILS : "Rails",
+  REACT : "React"
 }
 
 const techIcons = {
@@ -79,41 +77,39 @@ var itemSVG = '';
 let technologyName = "";
 class TechnologyItem extends Component {  
     
-    constructor(props){
-        super(props);  
-        itemSVG = this.convertStringToSVG(this.props.item);
-        technologyName = this.convertStringtoReadableString(this.props.stringName);
-    }
+  constructor(props){
+    super(props);  
+    itemSVG = this.convertStringToSVG(this.props.item);
+    technologyName = this.convertStringtoReadableString(this.props.stringName);
+  }
 
+  convertStringtoReadableString(stringName){
+    if (stringName.toUpperCase() in techNames){
+      return techNames[stringName.toUpperCase()];
+    }
+    else{
+      return techNames.REACT;
+    }
+  }
 
-    convertStringtoReadableString(stringName){
-        if (stringName.toUpperCase() in techNames){
-            return techNames[stringName.toUpperCase()];
-        }
-        else{
-            return techNames.REACT;
-        }
+  convertStringToSVG(itemSVG){
+    if (itemSVG.toUpperCase() in techIcons){
+      return techIcons[itemSVG.toUpperCase()];
     }
-    convertStringToSVG(itemSVG){
-        if (itemSVG.toUpperCase() in techIcons){
-            return techIcons[itemSVG.toUpperCase()];
-        }
-        else{
-            return techIcons.REACT;
-        }
+    else{
+      return techIcons.REACT;
     }
+  }
     
-    render() 
-    {
-      return (     
-        <div className="tech-icon-container">
-          <Tooltip title={technologyName} position="bottom" distance="5">
-            <SVGInline className="tech-icon" svg={itemSVG} />
-          </Tooltip>
-        </div>
-      );
-    }
-  
+  render() {
+    return (     
+      <div className="tech-icon-container">
+        <Tooltip title={technologyName} position="bottom" distance="5">
+          <SVGInline className="tech-icon" svg={itemSVG} />
+        </Tooltip>
+      </div>
+    );
+  }
 }
 
 export default TechnologyItem;

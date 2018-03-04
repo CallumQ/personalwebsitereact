@@ -11,7 +11,6 @@ class Header extends Component {
           <Link to="/" className="website-logo">
             <SVGInline svg={HeaderLogo} />
           </Link>
-            
           <ul id="nav-mobile" className="right nav-bar-right">
             <NavLink exact to="/" activeClassName="active">Home</NavLink>
             <NavLink to="/about" activeClassName="active">About</NavLink>
