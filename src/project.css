@@ -11,3 +11,7 @@
     margin-right:-24px;
     height: 36px;
 }
+
+a {
+    cursor: pointer;
+}

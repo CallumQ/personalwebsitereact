@@ -3,6 +3,10 @@ import '../../src/project.css';
 import TechnologyItem from './technologyItem';
 import { NavLink } from 'react-router-dom';
 class Project extends Component {  
+  sendIDforModal(){
+  
+    this.props.expand(this.props.properties.id);
+  }
 
   render() {
     return (
@@ -25,7 +29,7 @@ class Project extends Component {
               {this.props.properties.technology.map(tech => <TechnologyItem key={tech}item={tech} stringName={tech}/>)}
             </div>
             <div className="right-section valign-wrapper ">
-              <NavLink to={"portfolio/"+this.props.properties.url}> Expand</NavLink>
+            <a onClick={() => {this.sendIDforModal()}}>Expand</a>
             </div> 
           </div>
           <div className="card-reveal">

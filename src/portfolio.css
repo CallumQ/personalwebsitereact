@@ -41,3 +41,27 @@
 li.waves-effect > a > i{
     color: rgb(1, 76, 143) !important;
 }
+
+.card-content{
+    padding-left: 24px ;
+    padding-right: 24px;
+    padding-top: 16px !important;
+    padding-bottom: 16px !important;
+}
+.example-enter {
+    opacity: 0.01;
+  }
+  
+  .example-enter.example-enter-active {
+    opacity: 1;
+    transition: opacity 500ms ease-in;
+  }
+  
+  .example-leave {
+    opacity: 1;
+  }
+  
+  .example-leave.example-leave-active {
+    opacity: 0.01;
+    transition: opacity 300ms ease-in;
+  }
