@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import '../../src/project.css';
 import TechnologyItem from './technologyItem';
-import { NavLink } from 'react-router-dom';
+
 class Project extends Component {  
   sendIDforModal(){
   

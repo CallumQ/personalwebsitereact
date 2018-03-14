@@ -5,6 +5,7 @@
   "dependencies": {
     "history": "^4.7.2",
     "jquery": "^3.3.1",
+    "materialize-social": "^1.0.3",
     "react": "^16.2.0",
     "react-addons-css-transition-group": "^15.6.2",
     "react-dom": "^16.2.0",

@@ -15,3 +15,70 @@
 a {
     cursor: pointer;
 }
+.project-container{
+    
+    margin: 0 auto;
+
+}
+.popover-container{
+    background: white;
+    height: 1000px;
+    width: 1000px;
+    padding-left: 24px ;
+    padding-right: 24px;
+    padding-top: 16px !important;
+    padding-bottom: 16px !important;
+}
+.popover-close{
+    font-size: 3em !important;
+    cursor: pointer;
+    padding: 2px;
+}
+.popover-header h2{
+margin: 0px;
+
+}
+.popover-header{
+    width: 100%;
+    height: 65px;
+    border-bottom: 1px solid #e0e0e0;
+}
+.popover-image{
+    margin-top: 10px;
+}
+.popover-description-section{
+    height: 218px;
+    border-bottom: 1px solid #e0e0e0;
+    border-top: 1px solid #e0e0e0;
+}
+.popover-description{
+    width: 70%;
+    display: inline-block;
+    padding-right: 8px;
+    border-right: 1px solid #e0e0e0;
+    height: 100%;
+}
+.popover-additionalDetails{
+    width: 30%;
+    padding-left: 16px;
+    float: right;
+}
+.popover-bottomSection{
+    height: 69px;
+
+}
+.adjusted-logo{
+    padding-left: 10px;
+    margin-top: 10px;
+    font-size: 19px !important;
+}
+.bottomSection-right{
+    float: right;
+}
+button{
+    
+    margin-left: 10px;
+}
+.language-text{
+    width: 60%;
+}

@@ -79,8 +79,8 @@ const techIcons = {
   DEFAULT :       '<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 749 749"><defs><style>.cls-1{fill:#fff}</style></defs><path d="M0 0h93v93H0z"/><path class="cls-1" d="M94 93h93V0H93v93h1z"/><path d="M187 0h94v93h-94z"/><path class="cls-1" d="M281 0h93v93h-93z"/><path d="M375 93h93V0h-94v93h1z"/><path class="cls-1" d="M468 0h94v93h-94z"/><path d="M562 0h93v93h-93z"/><path class="cls-1" d="M656 0h-1v93h94V0h-93zM93 94v-1H0v94h93V94z"/><path d="M187 187V93H93v94h94z"/><path class="cls-1" d="M187 187h94V93h-94v94z"/><path d="M281 187h93V93h-93v94z"/><path class="cls-1" d="M374 187h94V93h-94v94z"/><path d="M468 187h94V93h-94v94z"/><path class="cls-1" d="M562 94v93h93V93h-93v1z"/><path d="M655 93v94h94V93h-94zM0 187h93v94H0z"/><path class="cls-1" d="M187 281v-94H93v94h94z"/><path d="M187 187h94v94h-94z"/><path class="cls-1" d="M281 187h93v94h-93z"/><path d="M375 281h93v-94h-94v94h1z"/><path class="cls-1" d="M468 187h94v94h-94z"/><path d="M562 187h93v94h-93z"/><path class="cls-1" d="M655 187v94h94v-94h-94zM0 281h93v93H0z"/><path d="M187 374v-93H93v93h94z"/><path class="cls-1" d="M187 281h94v93h-94z"/><path d="M281 281h93v93h-93z"/><path class="cls-1" d="M374 281v93h94v-93h-94z"/><path d="M468 281h94v93h-94z"/><path class="cls-1" d="M562 281h93v93h-93z"/><path d="M655 281v93h94v-93h-94zM93 375v-1H0v94h93v-93z"/><path class="cls-1" d="M187 468v-94H93v94h94z"/><path d="M281 375v-1h-94v94h94v-93z"/><path class="cls-1" d="M374 374h-93v94h93v-94z"/><path d="M374 374v94h94v-94h-94z"/><path class="cls-1" d="M468 375v93h94v-94h-94v1z"/><path d="M562 375v93h93v-94h-93v1z"/><path class="cls-1" d="M655 374v94h94v-94h-94zM0 468h93v94H0z"/><path d="M187 562v-94H93v94h94z"/><path class="cls-1" d="M187 468h94v94h-94z"/><path d="M281 468h93v94h-93z"/><path class="cls-1" d="M375 468h-1v94h94v-94h-93z"/><path d="M468 468h94v94h-94z"/><path class="cls-1" d="M562 468h93v94h-93z"/><path d="M655 468v94h94v-94h-94zM0 562h93v93H0z"/><path class="cls-1" d="M94 562h-1v93h94v-93H94z"/><path d="M187 562h94v93h-94z"/><path class="cls-1" d="M281 562h93v93h-93z"/><path d="M375 562h-1v93h94v-93h-93z"/><path class="cls-1" d="M468 562h94v93h-94z"/><path d="M562 562h93v93h-93z"/><path class="cls-1" d="M655 562v93h94v-93h-94zM93 655H0v94h93v-94z"/><path d="M187 655H93v94h94v-94z"/><path class="cls-1" d="M281 655h-94v94h94v-94z"/><path d="M374 655h-93v94h93v-94z"/><path class="cls-1" d="M468 655h-94v94h94v-94z"/><path d="M562 655h-94v94h94v-94z"/><path class="cls-1" d="M655 655h-93v94h93v-94z"/><path d="M655 655v94h94v-94h-94z"/></svg>',
 }
 
-var itemSVG = '';
-let technologyName = "";
+
+
 class TechnologyItem extends Component {  
     
   constructor(props){
@@ -117,7 +117,7 @@ class TechnologyItem extends Component {
   render() {
     return (     
       <div className="tech-icon-container">
-        <Tooltip title={technologyName} position="bottom" distance="5">
+        <Tooltip title={this.state.technologyName} position="bottom" distance="5">
           <SVGInline className="tech-icon" svg={this.state.itemSVG} key={this.randomnumber()}/>
         </Tooltip>
       </div>

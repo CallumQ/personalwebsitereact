@@ -19,7 +19,7 @@ class Portfolio extends Component {
           name :"zero",
           summary : "A simple web browser written in C# which performs HTTP requests.",
           description : "this is a description this is a description this is a description this is a description this is a description this is a description ",
-          previewImage: "https://lh3.googleusercontent.com/0-BzaWtxoAnsBjQ_wzUcKxyF07XE7v2Kkg1ogPVUdzmQpvaz118uHQEGU6BdtzJuzfo=h556",
+          previewImage: "http://via.placeholder.com/950x600",
           technology:["C","JAVA","DKDKDK"],
           url: "one",
         },{
@@ -27,7 +27,7 @@ class Portfolio extends Component {
           name :"one",
           summary : "A simple web browser written in C# which performs HTTP requests.",
           description : "this is a description this is a description this is a description this is a description this is a description this is a description ",
-          previewImage: "https://lh3.googleusercontent.com/0-BzaWtxoAnsBjQ_wzUcKxyF07XE7v2Kkg1ogPVUdzmQpvaz118uHQEGU6BdtzJuzfo=h556",
+          previewImage: "http://via.placeholder.com/950x600",
           technology:["C","JAVA"],
           url: "two",
         },{
@@ -35,7 +35,7 @@ class Portfolio extends Component {
           name :"two",
           summary : "A simple web browser written in C# which performs HTTP requests.",
           description : "this is a description this is a description this is a description this is a description this is a description this is a description ",
-          previewImage: "https://lh3.googleusercontent.com/0-BzaWtxoAnsBjQ_wzUcKxyF07XE7v2Kkg1ogPVUdzmQpvaz118uHQEGU6BdtzJuzfo=h556",
+          previewImage: "http://via.placeholder.com/950x600",
           technology:["C","JAVA"],
           url: "three",
         },{
@@ -43,7 +43,7 @@ class Portfolio extends Component {
           name :"three",
           summary : "A simple web browser written in C# which performs HTTP requests.",
           description : "this is a description this is a description this is a description this is a description this is a description this is a description ",
-          previewImage: "https://lh3.googleusercontent.com/0-BzaWtxoAnsBjQ_wzUcKxyF07XE7v2Kkg1ogPVUdzmQpvaz118uHQEGU6BdtzJuzfo=h556",
+          previewImage: "http://via.placeholder.com/950x600",
           technology:["C","JAVA"],
           url: "four",
         },{
@@ -51,7 +51,7 @@ class Portfolio extends Component {
           name :"four",
           summary : "A simple web browser written in C# which performs HTTP requests.",
           description : "this is a description this is a description this is a description this is a description this is a description this is a description ",
-          previewImage: "https://lh3.googleusercontent.com/0-BzaWtxoAnsBjQ_wzUcKxyF07XE7v2Kkg1ogPVUdzmQpvaz118uHQEGU6BdtzJuzfo=h556",
+          previewImage: "http://via.placeholder.com/950x600",
           technology:["C","JAVA"],
           url: "five",
         },{
@@ -59,7 +59,7 @@ class Portfolio extends Component {
           name :"five",
           summary : "A simple web browser written in C# which performs HTTP requests.",
           description : "this is a description this is a description this is a description this is a description this is a description this is a description ",
-          previewImage: "https://lh3.googleusercontent.com/0-BzaWtxoAnsBjQ_wzUcKxyF07XE7v2Kkg1ogPVUdzmQpvaz118uHQEGU6BdtzJuzfo=h556",
+          previewImage: "http://via.placeholder.com/950x600",
           technology:["C","JAVA"],
           url: "six",
         },
@@ -68,7 +68,7 @@ class Portfolio extends Component {
           name :"six",
           summary : "A simple web browser written in C# which performs HTTP requests.",
           description : "this is a description",
-          previewImage: "https://lh3.googleusercontent.com/0-BzaWtxoAnsBjQ_wzUcKxyF07XE7v2Kkg1ogPVUdzmQpvaz118uHQEGU6BdtzJuzfo=h556",
+          previewImage: "http://via.placeholder.com/950x600",
           technology:["C","CPLUSPLUS"],
           url: "seven",
         },
@@ -77,7 +77,7 @@ class Portfolio extends Component {
           name :"seven",
           summary : "A simple web browser written in C# which performs HTTP requests.",
           description : "this is a description",
-          previewImage: "https://lh3.googleusercontent.com/0-BzaWtxoAnsBjQ_wzUcKxyF07XE7v2Kkg1ogPVUdzmQpvaz118uHQEGU6BdtzJuzfo=h556",
+          previewImage: "http://via.placeholder.com/950x600",
           technology:["REACT","CSS","HTML5","JAVASCRIPT","MONGODB"],
           url: "eight",
         },{
@@ -85,7 +85,7 @@ class Portfolio extends Component {
           name :"eight",
           summary : "A simple web browser written in C# which performs HTTP requests.",
           description : "this is a description this is a description this is a description this is a description this is a description this is a description ",
-          previewImage: "https://lh3.googleusercontent.com/0-BzaWtxoAnsBjQ_wzUcKxyF07XE7v2Kkg1ogPVUdzmQpvaz118uHQEGU6BdtzJuzfo=h556",
+          previewImage: "http://via.placeholder.com/950x600",
           technology:["C","JAVA"],
           url: "/this/will/point/to/a/endpoint",
         },{
@@ -93,7 +93,7 @@ class Portfolio extends Component {
           name :"nine",
           summary : "A simple web browser written in C# which performs HTTP requests.",
           description : "this is a description this is a description this is a description this is a description this is a description this is a description ",
-          previewImage: "https://lh3.googleusercontent.com/0-BzaWtxoAnsBjQ_wzUcKxyF07XE7v2Kkg1ogPVUdzmQpvaz118uHQEGU6BdtzJuzfo=h556",
+          previewImage: "http://via.placeholder.com/950x600",
           technology:["C","JAVA"],
           url: "/this/will/point/to/a/endpoint",
         },{
@@ -101,7 +101,7 @@ class Portfolio extends Component {
           name :"ten",
           summary : "A simple web browser written in C# which performs HTTP requests.",
           description : "this is a description this is a description this is a description this is a description this is a description this is a description ",
-          previewImage: "https://lh3.googleusercontent.com/0-BzaWtxoAnsBjQ_wzUcKxyF07XE7v2Kkg1ogPVUdzmQpvaz118uHQEGU6BdtzJuzfo=h556",
+          previewImage: "http://via.placeholder.com/950x600",
           technology:["C","JAVA"],
           url: "/this/will/point/to/a/endpoint",
         },{
@@ -109,7 +109,7 @@ class Portfolio extends Component {
           name :"eleven",
           summary : "A simple web browser written in C# which performs HTTP requests.",
           description : "this is a description this is a description this is a description this is a description this is a description this is a description ",
-          previewImage: "https://lh3.googleusercontent.com/0-BzaWtxoAnsBjQ_wzUcKxyF07XE7v2Kkg1ogPVUdzmQpvaz118uHQEGU6BdtzJuzfo=h556",
+          previewImage: "http://via.placeholder.com/950x600",
           technology:["C","JAVA"],
           url: "/this/will/point/to/a/endpoint",
         },{
@@ -117,7 +117,7 @@ class Portfolio extends Component {
           name :"twelve",
           summary : "A simple web browser written in C# which performs HTTP requests.",
           description : "this is a description this is a description this is a description this is a description this is a description this is a description ",
-          previewImage: "https://lh3.googleusercontent.com/0-BzaWtxoAnsBjQ_wzUcKxyF07XE7v2Kkg1ogPVUdzmQpvaz118uHQEGU6BdtzJuzfo=h556",
+          previewImage: "http://via.placeholder.com/950x600",
           technology:["C","JAVA"],
           url: "/this/will/point/to/a/endpoint",
         },{
@@ -125,7 +125,7 @@ class Portfolio extends Component {
           name :"thirteen",
           summary : "A simple web browser written in C# which performs HTTP requests.",
           description : "this is a description this is a description this is a description this is a description this is a description this is a description ",
-          previewImage: "https://lh3.googleusercontent.com/0-BzaWtxoAnsBjQ_wzUcKxyF07XE7v2Kkg1ogPVUdzmQpvaz118uHQEGU6BdtzJuzfo=h556",
+          previewImage: "http://via.placeholder.com/950x600",
           technology:["C","JAVA"],
           url: "/this/will/point/to/a/endpoint",
         },
@@ -134,7 +134,7 @@ class Portfolio extends Component {
           name :"fourteen",
           summary : "A simple web browser written in C# which performs HTTP requests.",
           description : "this is a description",
-          previewImage: "https://lh3.googleusercontent.com/0-BzaWtxoAnsBjQ_wzUcKxyF07XE7v2Kkg1ogPVUdzmQpvaz118uHQEGU6BdtzJuzfo=h556",
+          previewImage: "http://via.placeholder.com/950x600",
           technology:["C","CPLUSPLUS"],
           url: "/this/will/point/to/a/endpoint",
         },
@@ -143,7 +143,7 @@ class Portfolio extends Component {
           name :"fifteen",
           summary : "A simple web browser written in C# which performs HTTP requests.",
           description : "this is a description",
-          previewImage: "https://lh3.googleusercontent.com/0-BzaWtxoAnsBjQ_wzUcKxyF07XE7v2Kkg1ogPVUdzmQpvaz118uHQEGU6BdtzJuzfo=h556",
+          previewImage: "http://via.placeholder.com/950x600",
           technology:["REACT","CSS","HTML5","JAVASCRIPT"],
           url: "/this/will/point/to/a/endpoint",
         },
@@ -154,7 +154,7 @@ class Portfolio extends Component {
       name :"four",
       summary : "A simple web browser written in C# which performs HTTP requests.",
       description : "this is a description this is a description this is a description this is a description this is a description this is a description ",
-      previewImage: "https://lh3.googleusercontent.com/0-BzaWtxoAnsBjQ_wzUcKxyF07XE7v2Kkg1ogPVUdzmQpvaz118uHQEGU6BdtzJuzfo=h556",
+      previewImage: "http://via.placeholder.com/950x600",
       technology:["C","JAVA"],
       url: "five",}
     }
@@ -162,19 +162,23 @@ class Portfolio extends Component {
     this.pageUp = this.pageUp.bind(this);
     this.pageDown = this.pageDown.bind(this);
     this.expand = this.expand.bind(this);
+    this.minimise = this.minimise.bind(this);
   }
 
-  expand(value){
-    this.setState({selectedproperties: this.state.projects.find(item => item.id === value)});
+  minimise(){
+    this.setState({ togglePopup:"close"});
   }
-  pageUp() {
+  expand(value){
+    this.setState({selectedproperties: this.state.projects.find(item => item.id === value), togglePopup:"open"});
+  }
+  pageUp(e) {
     if (this.state.pageNo < this.state.projects.length / this.state.itemsPerPage){
       this.setState((prevState) => {return {pageNo: prevState.pageNo + 1}})
       this.updateProjects();
     }  
   }
 
-  pageDown() {
+  pageDown(e) {
     if(this.state.pageNo > 1){
       this.setState((prevState) => {return {pageNo: prevState.pageNo - 1}})
       this.updateProjects();    
@@ -222,8 +226,8 @@ class Portfolio extends Component {
         <div className="row center-align fixed-bottom">
           <Pagination pageNo={this.state.pageNo} pageUp={this.pageUp.bind(this)} pageDown={this.pageDown.bind(this)} pageDownClass={(this.state.pageNo <= 1)?false:true} pageUpClass={(this.state.pageNo < this.state.projects.length / this.state.itemsPerPage)?true:false} />
         </div>
-        <div className="projectExpanded">
-          <ProjectView properties={this.state.selectedproperties}/>
+        <div className={this.state.togglePopup ==="open" ? "projectExpanded valign-wrapper" : "projectMinimised"}>
+          <ProjectView className="projectExpanded-item valign-wrapper center-align" properties={this.state.selectedproperties} minimise={this.minimise.bind(this)}/>
         </div>   
       </div>
     );
