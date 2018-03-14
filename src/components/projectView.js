@@ -15,20 +15,28 @@ class ProjectView extends Component {
         </div>
         <div className="popover-image">
         <img className="activator" src={this.props.properties.previewImage} alt="project preview" />
+        <div className="popover-leftArrow"><i className="material-icons">keyboard_arrow_left</i></div>
+        <div className="popover-rightArrow"> <i className="material-icons">keyboard_arrow_right</i></div>
         </div>
         <div className="popover-description-section">
         <div className="popover-description"><h5>Description</h5>{this.props.properties.description}</div>
-        <div className="popover-additionalDetails"><h5>Additional Details</h5></div></div>
+        <div className="popover-additionalDetails"><h5>Documents</h5>
+        <ul>
+        {this.props.properties.documents.map(document => {return <a href={document.url} target="_blank"><li><i className={"icon-file-"+document.fileType}></i>{document.name}</li></a>})}
+          </ul></div></div>
         <div className="popover-bottomSection valign-wrapper">
-        <div className="language-text">Languages: 
+        <div className="bottomSection-left valign-wrapper">
+        <div className="language-text">Languages: </div>
+        <div className="technologyItems">
               {this.props.properties.technology.map(tech => <TechnologyItem key={tech}item={tech} stringName={tech}/>)}
               </div>
+              </div>
               <div className="bottomSection-right">
-              <button className="btn waves-effect waves-light" type="submit" name="action">View code<i className="icon-github-circled-alt adjusted-logo"></i>
-  </button>
-              <button className="btn waves-effect waves-light" type="submit" name="action">Visit site
+              <a href="https://github.com"><button className="btn waves-effect waves-light" type="submit" name="action">View Code<i className="icon-github-circled-alt adjusted-logo"></i>
+  </button></a>
+  <a href="https://google.com" className="modal-button">  <button className="btn waves-effect waves-light" type="submit" name="action">Visit site
     <i className="material-icons right">send</i>
-  </button>
+  </button></a>
   </div>
             </div>
         

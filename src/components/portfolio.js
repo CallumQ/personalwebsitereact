@@ -22,6 +22,13 @@ class Portfolio extends Component {
           previewImage: "http://via.placeholder.com/950x600",
           technology:["C","JAVA","DKDKDK"],
           url: "one",
+          documents: [{name:"word",
+            url : "https://www.google.com",
+            fileType: "word"
+          },{name:"pdf document",
+          url : "https://www.google.com",
+          fileType: "pdf"
+        }],
         },{
           id : "3263318a8a914f6683a312d85cbc40fa",
           name :"one",
@@ -30,6 +37,13 @@ class Portfolio extends Component {
           previewImage: "http://via.placeholder.com/950x600",
           technology:["C","JAVA"],
           url: "two",
+          documents: [{name:"word",
+            url : "https://www.google.com",
+            fileType: "word"
+          },{name:"pdf document",
+          url : "https://www.google.com",
+          fileType: "pdf"
+        }],
         },{
           id : "64c84aaa0aa440369dafb3a27e3f6c5f",
           name :"two",
@@ -38,6 +52,13 @@ class Portfolio extends Component {
           previewImage: "http://via.placeholder.com/950x600",
           technology:["C","JAVA"],
           url: "three",
+          documents: [{name:"word",
+            url : "https://www.google.com",
+            fileType: "word"
+          },{name:"pdf document",
+          url : "https://www.google.com",
+          fileType: "pdf"
+        }],
         },{
           id : "2ec43eac741a42d29b40af8f2121f243",
           name :"three",
@@ -46,6 +67,13 @@ class Portfolio extends Component {
           previewImage: "http://via.placeholder.com/950x600",
           technology:["C","JAVA"],
           url: "four",
+          documents: [{name:"word",
+            url : "https://www.google.com",
+            fileType: "word"
+          },{name:"pdf document",
+          url : "https://www.google.com",
+          fileType: "pdf"
+        }],
         },{
           id : "4cfaa0e837154d5b9b26fcb26393e662",
           name :"four",
@@ -54,6 +82,13 @@ class Portfolio extends Component {
           previewImage: "http://via.placeholder.com/950x600",
           technology:["C","JAVA"],
           url: "five",
+          documents: [{name:"word",
+            url : "https://www.google.com",
+            fileType: "word"
+          },{name:"pdf document",
+          url : "https://www.google.com",
+          fileType: "pdf"
+        }],
         },{
           id : "dc740de8915441ce8a1eabd422980d48",
           name :"five",
@@ -62,6 +97,13 @@ class Portfolio extends Component {
           previewImage: "http://via.placeholder.com/950x600",
           technology:["C","JAVA"],
           url: "six",
+          documents: [{name:"word",
+            url : "https://www.google.com",
+            fileType: "word"
+          },{name:"pdf document",
+          url : "https://www.google.com",
+          fileType: "pdf"
+        }],
         },
         {
           id : "11d8b0d0bff84e13b0a427fde4d5014a",
@@ -71,6 +113,13 @@ class Portfolio extends Component {
           previewImage: "http://via.placeholder.com/950x600",
           technology:["C","CPLUSPLUS"],
           url: "seven",
+          documents: [{name:"word",
+            url : "https://www.google.com",
+            fileType: "word"
+          },{name:"pdf document",
+          url : "https://www.google.com",
+          fileType: "pdf"
+        }],
         },
         {
           id : "6c00456ce6c3480498db552e35296de3",
@@ -80,6 +129,13 @@ class Portfolio extends Component {
           previewImage: "http://via.placeholder.com/950x600",
           technology:["REACT","CSS","HTML5","JAVASCRIPT","MONGODB"],
           url: "eight",
+          documents: [{name:"word",
+            url : "https://www.google.com",
+            fileType: "word"
+          },{name:"pdf document",
+          url : "https://www.google.com",
+          fileType: "pdf"
+        }],
         },{
           id : "5b30ceb1741a45d0ad96a41dca4a1f40",
           name :"eight",
@@ -88,6 +144,13 @@ class Portfolio extends Component {
           previewImage: "http://via.placeholder.com/950x600",
           technology:["C","JAVA"],
           url: "/this/will/point/to/a/endpoint",
+          documents: [{name:"word",
+            url : "https://www.google.com",
+            fileType: "word"
+          },{name:"pdf document",
+          url : "https://www.google.com",
+          fileType: "pdf"
+        }],
         },{
           id : "9755607f72b64488b6fbb29ca8763b61",
           name :"nine",
@@ -96,6 +159,13 @@ class Portfolio extends Component {
           previewImage: "http://via.placeholder.com/950x600",
           technology:["C","JAVA"],
           url: "/this/will/point/to/a/endpoint",
+          documents: [{name:"word",
+            url : "https://www.google.com",
+            fileType: "word"
+          },{name:"pdf document",
+          url : "https://www.google.com",
+          fileType: "pdf"
+        }],
         },{
           id : "8b58b7e586314700a4b9cb45d4431312",
           name :"ten",
@@ -104,6 +174,13 @@ class Portfolio extends Component {
           previewImage: "http://via.placeholder.com/950x600",
           technology:["C","JAVA"],
           url: "/this/will/point/to/a/endpoint",
+          documents: [{name:"word",
+            url : "https://www.google.com",
+            fileType: "word"
+          },{name:"pdf document",
+          url : "https://www.google.com",
+          fileType: "pdf"
+        }],
         },{
           id : "9c5b87da34284877806b450fec1a031d",
           name :"eleven",
@@ -112,6 +189,13 @@ class Portfolio extends Component {
           previewImage: "http://via.placeholder.com/950x600",
           technology:["C","JAVA"],
           url: "/this/will/point/to/a/endpoint",
+          documents: [{name:"word",
+            url : "https://www.google.com",
+            fileType: "word"
+          },{name:"pdf document",
+          url : "https://www.google.com",
+          fileType: "pdf"
+        }],
         },{
           id : "2797f73269c443ab84e31459d4899b8b",
           name :"twelve",
@@ -120,6 +204,13 @@ class Portfolio extends Component {
           previewImage: "http://via.placeholder.com/950x600",
           technology:["C","JAVA"],
           url: "/this/will/point/to/a/endpoint",
+          documents: [{name:"word",
+            url : "https://www.google.com",
+            fileType: "word"
+          },{name:"pdf document",
+          url : "https://www.google.com",
+          fileType: "pdf"
+        }],
         },{
           id : "4fe48933b30a4eae96521d8e54f04c39",
           name :"thirteen",
@@ -128,6 +219,13 @@ class Portfolio extends Component {
           previewImage: "http://via.placeholder.com/950x600",
           technology:["C","JAVA"],
           url: "/this/will/point/to/a/endpoint",
+          documents: [{name:"word",
+            url : "https://www.google.com",
+            fileType: "word"
+          },{name:"pdf document",
+          url : "https://www.google.com",
+          fileType: "pdf"
+        }],
         },
         {
           id : "e3ead03c5446406594cd1452787df360",
@@ -137,6 +235,13 @@ class Portfolio extends Component {
           previewImage: "http://via.placeholder.com/950x600",
           technology:["C","CPLUSPLUS"],
           url: "/this/will/point/to/a/endpoint",
+          documents: [{name:"word",
+            url : "https://www.google.com",
+            fileType: "word"
+          },{name:"pdf document",
+          url : "https://www.google.com",
+          fileType: "pdf"
+        }],
         },
         {
           id : "cb3b1bd4d00340d9a2aac2caf34559b2",
@@ -146,6 +251,13 @@ class Portfolio extends Component {
           previewImage: "http://via.placeholder.com/950x600",
           technology:["REACT","CSS","HTML5","JAVASCRIPT"],
           url: "/this/will/point/to/a/endpoint",
+          documents: [{name:"word",
+            url : "https://www.google.com",
+            fileType: "word"
+          },{name:"pdf document",
+          url : "https://www.google.com",
+          fileType: "pdf"
+        }],
         },
       
       ],
@@ -156,7 +268,14 @@ class Portfolio extends Component {
       description : "this is a description this is a description this is a description this is a description this is a description this is a description ",
       previewImage: "http://via.placeholder.com/950x600",
       technology:["C","JAVA"],
-      url: "five",}
+      url: "five",
+      documents: [{name:"word",
+      url : "https://www.google.com",
+      fileType: "word"
+    },{name:"pdf document",
+    url : "https://www.google.com",
+    fileType: "pdf"
+  }],}
     }
 
     this.pageUp = this.pageUp.bind(this);
