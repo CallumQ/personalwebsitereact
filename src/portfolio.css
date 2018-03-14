@@ -50,32 +50,34 @@ li.waves-effect > a > i{
 }
 .example-enter {
     opacity: 0.01;
-  }
+}
   
-  .example-enter.example-enter-active {
+.example-enter.example-enter-active {
     opacity: 1;
     transition: opacity 500ms ease-in;
-  }
+}
   
-  .example-leave {
+.example-leave {
     opacity: 1;
-  }
+}
   
-  .example-leave.example-leave-active {
+.example-leave.example-leave-active {
     opacity: 0.01;
     transition: opacity 300ms ease-in;
-  }
+}
 
-  .projectExpanded{
+.projectExpanded{
     height: 100%;
     width: 100%;
-  }
+}
+
 .projectExpanded,.projectMinimised{
     position: fixed;
     background: rgba(0, 0, 0, 0.5);
     top: 0px;
     z-index: 100;
 }
+
 .projectMinimised{
-  display: none;
+    display: none;
 }
