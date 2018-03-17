@@ -275,7 +275,7 @@ class Portfolio extends Component {
     },{name:"pdf document",
     url : "https://www.google.com",
     fileType: "pdf"
-  }],}
+    }],}
     }
 
     this.pageUp = this.pageUp.bind(this);
@@ -287,17 +287,19 @@ class Portfolio extends Component {
   minimise(){
     this.setState({ togglePopup:"close"});
   }
+
   expand(value){
     this.setState({selectedproperties: this.state.projects.find(item => item.id === value), togglePopup:"open"});
   }
-  pageUp(e) {
+
+  pageUp() {
     if (this.state.pageNo < this.state.projects.length / this.state.itemsPerPage){
       this.setState((prevState) => {return {pageNo: prevState.pageNo + 1}})
       this.updateProjects();
     }  
   }
 
-  pageDown(e) {
+  pageDown() {
     if(this.state.pageNo > 1){
       this.setState((prevState) => {return {pageNo: prevState.pageNo - 1}})
       this.updateProjects();    
@@ -305,8 +307,7 @@ class Portfolio extends Component {
   }
 
   updateProjects(){
-    let offset = this.state.itemsPerPage*this.state.pageNo; 
-    
+    let offset = this.state.itemsPerPage*this.state.pageNo;   
     return this.state.projects.slice(offset- this.state.itemsPerPage,offset);
   }
 

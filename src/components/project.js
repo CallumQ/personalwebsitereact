@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import '../../src/project.css';
+import PropTypes from 'prop-types';
 import TechnologyItem from './technologyItem';
 
 class Project extends Component {  
   sendIDforModal(){
-  
     this.props.expand(this.props.properties.id);
   }
 
@@ -45,6 +45,11 @@ class Project extends Component {
       </div>
       );
     }
+}
+
+Project.propTypes = {
+  properties : PropTypes.object,
+  expand:PropTypes.func
 }
 
 export default Project;

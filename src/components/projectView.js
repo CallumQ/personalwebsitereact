@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import TechnologyItem from './technologyItem';
 import '../../src/project.css';
 
@@ -26,7 +27,7 @@ class ProjectView extends Component {
             <div className="popover-additionalDetails">
               <h5>Documents</h5>
               <ul>
-                {this.props.properties.documents.map(document => {return <a href={document.url} target="_blank"><li><i className={"icon-file-"+document.fileType}></i>{document.name}</li></a>})}
+                {this.props.properties.documents.map(document => {return <a href={document.url} target="_blank" key={document.name}><li><i className={"icon-file-"+document.fileType}></i>{document.name}</li></a>})}
               </ul>
             </div>
           </div>
@@ -46,6 +47,11 @@ class ProjectView extends Component {
       </div>
       );
     }
+}
+
+ProjectView.propTypes = {
+  properties : PropTypes.object,
+  minimise : PropTypes.func
 }
 
 export default ProjectView;

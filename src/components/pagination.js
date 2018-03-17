@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import PropTypes from 'prop-types';
 class Pagination extends Component {  
 
   componentDidMount() {
@@ -15,6 +15,12 @@ class Pagination extends Component {
       </ul> 
     );
   }
+}
+
+Pagination.propTypes = {
+  pageNo: PropTypes.number,
+  pageUp : PropTypes.func,
+  pageDown : PropTypes.func
 }
 
 export default Pagination;

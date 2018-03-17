@@ -18,7 +18,7 @@ class Home extends Component {
           <div className="mainContainer-centerSection">
             
             <div className="row">
-              <div className="col s7 right-align mainText">Hi, I'm Callum<br/> and I make software</div>
+              <div className="col s7 right-align mainText">Hi, I&apos;m Callum<br/> and I make software</div>
               <div className="col s5 device-container"><SVGInline svg={mobileLaptopSVG} className="mobileLaptopSVGContainer"/></div>
             </div>
            

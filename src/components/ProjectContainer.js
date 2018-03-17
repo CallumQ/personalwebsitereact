@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import Project from './project';
 
 class ProjectContainer extends Component {  
@@ -9,6 +10,11 @@ class ProjectContainer extends Component {
      </div>
     );
   }  
+}
+
+ProjectContainer.propTypes = {
+  projects : PropTypes.array,
+  expand : PropTypes.func
 }
 
 export default ProjectContainer;
