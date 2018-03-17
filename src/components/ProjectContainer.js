@@ -5,7 +5,7 @@ import Project from './project';
 class ProjectContainer extends Component {  
   render() {
     return (
-      <div>
+      <div>d
         {this.props.projects.map(project => <Project key={project.id} properties={project} expand={this.props.expand}/>)}
      </div>
     );
@@ -18,3 +18,4 @@ ProjectContainer.propTypes = {
 }
 
 export default ProjectContainer;
+
