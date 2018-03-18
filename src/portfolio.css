@@ -34,8 +34,9 @@
     margin: 0;
 }
 
-.active{
-    background-color: rgb(1, 76, 143) !important;
+.backgroundcolour{
+
+    background: var(--main-colour) !important;
 }
 
 li.waves-effect > a > i{

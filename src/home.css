@@ -16,7 +16,7 @@
 }
 
 .linksSection{
-    border-top: 5px solid #014c8f;
+    border-top: 5px solid var(--main-colour);
     font-size: 40px;
 }
 
@@ -52,7 +52,7 @@ body {
 
 /* overrides default background colour of the tooltip*/
 .tippy-tooltip, .enter{
-    background: #014c8f ! important;
+    background: var(--main-colour) !important;
 }
 
 .laptop-clip-path{      
@@ -78,7 +78,7 @@ body {
  }
 
  .svg-device-bars {
-    fill: #014c8f;
+    fill: var(--main-colour);
  }
 
  @keyframes scroll-svg {

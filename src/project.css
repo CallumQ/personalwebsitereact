@@ -112,7 +112,7 @@ button{
 }
 
 .btn{
-    background-color: #014c8f;
+    background-color: var(--main-colour);
 }
 
 .btn:hover{
