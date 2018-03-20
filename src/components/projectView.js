@@ -48,7 +48,7 @@ class ProjectView extends Component {
       );
     }
 }
-
+//this.props validation (only used for during dev)
 ProjectView.propTypes = {
   properties : PropTypes.object,
   minimise : PropTypes.func

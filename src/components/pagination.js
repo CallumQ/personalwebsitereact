@@ -17,6 +17,7 @@ class Pagination extends Component {
   }
 }
 
+//this.props validation (only used for during dev)
 Pagination.propTypes = {
   pageNo: PropTypes.number,
   pageUp : PropTypes.func,

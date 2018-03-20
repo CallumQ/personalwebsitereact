@@ -11,8 +11,7 @@ class Portfolio extends Component {
     super();
     this.state = {
       pageNo : 1,
-      itemsPerPage : 8,
-      noOfProjects : 8,
+      itemsPerPage : 8, //the number of items that can be displayed on the page at once
       projects : [
         {
           id : "9c090f823f8f4fa28b8441a21be920d5",
@@ -278,6 +277,7 @@ class Portfolio extends Component {
     }],}
     }
 
+    //bind the functions to this so that when they are called against the correct object
     this.pageUp = this.pageUp.bind(this);
     this.pageDown = this.pageDown.bind(this);
     this.expand = this.expand.bind(this);
@@ -292,6 +292,8 @@ class Portfolio extends Component {
     this.setState({selectedproperties: this.state.projects.find(item => item.id === value), togglePopup:"open"});
   }
 
+  //triggers when the ">" button is pressed.
+  //increments the page counter and updates the projects to be displayed
   pageUp() {
     if (this.state.pageNo < this.state.projects.length / this.state.itemsPerPage){
       this.setState((prevState) => {return {pageNo: prevState.pageNo + 1}})
@@ -299,6 +301,8 @@ class Portfolio extends Component {
     }  
   }
 
+  //triggers when the "<" button is pressed.
+  //decrements the page counter and updates the projects to be displayed
   pageDown() {
     if(this.state.pageNo > 1){
       this.setState((prevState) => {return {pageNo: prevState.pageNo - 1}})
@@ -306,6 +310,9 @@ class Portfolio extends Component {
     }
   }
 
+  //calculates the page offset for example
+  //pageNo = 4 && itemsPerPage = 8 will give an offset of 32
+  //we then use this to calculate which projects in the project array should be displayed
   updateProjects(){
     let offset = this.state.itemsPerPage*this.state.pageNo;   
     return this.state.projects.slice(offset- this.state.itemsPerPage,offset);

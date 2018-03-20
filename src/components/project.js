@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import TechnologyItem from './technologyItem';
 
 class Project extends Component {  
+  //passes the id of the element that has been clicked to the parent component
   sendIDforModal(){
     this.props.expand(this.props.properties.id);
   }

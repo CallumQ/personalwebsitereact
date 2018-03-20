@@ -12,6 +12,7 @@ class ProjectContainer extends Component {
   }  
 }
 
+//this.props validation (only used for during dev)
 ProjectContainer.propTypes = {
   projects : PropTypes.array,
   expand : PropTypes.func
