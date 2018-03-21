@@ -6,8 +6,7 @@ import CV from './components/cv';
 import Blog from './components/blog';
 import Contact from './components/contact';
 import Header from './components/header';
-import { BrowserRouter as Router, Route } from 'react-router-dom'
-
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 class App extends Component{
   
@@ -15,13 +14,13 @@ class App extends Component{
     return (
       <Router> 
         <div className="App">
-          <Header />
+          <Header/>
           <Route exact path="/" component={Home} /> 
           <Route exact path="/about" component={About} /> 
           <Route exact path="/portfolio" component={Portfolio} /> 
           <Route exact path="/cv" component={CV} /> 
           <Route exact path="/blog" component={Blog} /> 
-          <Route exact path="/contact" component={Contact} />           
+          <Route exact path="/contact" component={Contact} />  
         </div>
       </Router>
     );

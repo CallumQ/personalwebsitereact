@@ -1,3 +1,9 @@
+:root {
+    --main-colour: #014c8f;   
+
+}
+
+
 body, html {
     height: 100%;
 }
@@ -9,14 +15,13 @@ body, html {
 }
 
 nav{   
-    position: fixed;
-    background: #014c8f;   
+    position: relative;
+    background: var(--main-colour);
     border-bottom: 1px solid rgba(0,0,0,0.02);
 }
 
 .active{
-color: #ffffff !important;
-
+  background-color: rgba(0,0,0,0.1);
 }
 .nav-bar-right{
     display: flex;
@@ -28,6 +33,3 @@ color: #ffffff !important;
     transition: 0.3s ease all;
 }
 
-.active{
-    background-color: rgba(0, 0, 0, 0.5) !important;  
-}

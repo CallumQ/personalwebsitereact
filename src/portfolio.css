@@ -1,0 +1,84 @@
+.center-align{
+    margin-bottom: 0px;
+}
+
+.pagination{
+    margin-bottom: 0px;
+}
+
+.fixed-bottom{
+    position: fixed;
+    bottom: 10px;
+    width: 100%;
+    border-top: 1px solid rgba(0,0,0,0.1);
+}
+
+.pos-relative{
+    position: relative;
+}
+
+.project-counter{
+    font-size: 20px;
+    color: rgba(0,0,0,0.5);
+    margin-bottom: 10px;
+    bottom: 0px;
+    right: 0px !important;
+    width: 250px !important;
+    text-align: right;
+    position: absolute;
+}
+
+.no-padding{
+
+    padding: 0;
+    margin: 0;
+}
+
+.backgroundcolour{
+
+    background: var(--main-colour) !important;
+}
+
+li.waves-effect > a > i{
+    color: rgb(1, 76, 143) !important;
+}
+
+.card-content{
+    padding-left: 24px ;
+    padding-right: 24px;
+    padding-top: 16px !important;
+    padding-bottom: 16px !important;
+}
+.example-enter {
+    opacity: 0.01;
+}
+  
+.example-enter.example-enter-active {
+    opacity: 1;
+    transition: opacity 500ms ease-in;
+}
+  
+.example-leave {
+    opacity: 1;
+}
+  
+.example-leave.example-leave-active {
+    opacity: 0.01;
+    transition: opacity 300ms ease-in;
+}
+
+.projectExpanded{
+    height: 100%;
+    width: 100%;
+}
+
+.projectExpanded,.projectMinimised{
+    position: fixed;
+    background: rgba(0, 0, 0, 0.5);
+    top: 0px;
+    z-index: 100;
+}
+
+.projectMinimised{
+    display: none;
+}

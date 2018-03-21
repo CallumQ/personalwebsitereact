@@ -1,9 +1,9 @@
 .mainContainer{
-    height: 100vh;
+    height: 95vh;
 }
 
 .mainContainer-centerSection{
-    width: 50%;
+
     margin: 0 auto;
 }
 
@@ -16,7 +16,7 @@
 }
 
 .linksSection{
-    border-top: 5px solid #014c8f;
+    border-top: 5px solid var(--main-colour);
     font-size: 40px;
 }
 
@@ -33,10 +33,7 @@
 .mainText{
     color: black;
     font-size: 80px;
-}
-
-body {
-    background: white;  /* fallback for old browsers */
+    width: inherit !important;
 }
 
 .particleSection{
@@ -52,7 +49,7 @@ body {
 
 /* overrides default background colour of the tooltip*/
 .tippy-tooltip, .enter{
-    background: #014c8f ! important;
+    background: var(--main-colour) !important;
 }
 
 .laptop-clip-path{      
@@ -65,25 +62,20 @@ body {
 
 .svg-scroll{	
     animation : scroll-svg 10s infinite;
-    animation-delay: 0.5s;
+    animation-delay: 0.0s;
 }
-
-.svg-scroll-on{	
-    transition-delay: 5s;
-    transition: all 10000ms ease;       
-    transform: translate(0px, -1000px);
-}   
+ 
 .svg-device-background {
     fill: #fdffff;
  }
 
  .svg-device-bars {
-    fill: #014c8f;
+    fill: var(--main-colour);
  }
 
  @keyframes scroll-svg {
     0% {  transform: translate(0px, -0px);}
-    90% {  transform: translate(0px, -890px);}
-    95% {  transform: translate(0px, -0px);
+    95% {  transform: translate(0px, -890px);}
+    99% {  transform: translate(0px, -0px);
     }
 }
