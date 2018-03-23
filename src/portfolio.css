@@ -72,13 +72,20 @@ li.waves-effect > a > i{
     width: 100%;
 }
 
-.projectExpanded,.projectMinimised{
+.projectExpanded, .projectMinimised{
     position: fixed;
     background: rgba(0, 0, 0, 0.5);
     top: 0px;
     z-index: 100;
+    opacity: 1;
+    transition: 0.2s ease opacity;
 }
 
 .projectMinimised{
-    display: none;
+    height: 0px;
+    width: 0px;
+    opacity: 0;
+    overflow: hidden;
+
+
 }
