@@ -4,12 +4,14 @@ import ProjectContainer from './ProjectContainer';
 import Pagination from'./pagination';
 import { CSSTransitionGroup } from 'react-transition-group';
 import ProjectView from './projectView';
+import {Row, Input} from 'react-materialize' 
 
 class Portfolio extends Component {  
   
   constructor() {
     super();
     this.state = {
+      UniqueTechnology : [],
       pageNo : 1,
       itemsPerPage : 8, //the number of items that can be displayed on the page at once
       projects : [
@@ -282,6 +284,7 @@ class Portfolio extends Component {
     this.pageDown = this.pageDown.bind(this);
     this.expand = this.expand.bind(this);
     this.minimise = this.minimise.bind(this);
+
   }
 
   minimise(){
@@ -318,13 +321,46 @@ class Portfolio extends Component {
     return this.state.projects.slice(offset- this.state.itemsPerPage,offset);
   }
 
+  buildTechnologyList(){
+    var array = [];
+    this.state.projects.forEach(function(project){
+      project.technology.forEach(function(item){
+      if(!array.includes(item)){
+        array.push(item);
+      }
+    });
+    });
+    this.setState({UniqueTechnology : array});
+  }
   componentDidMount() {
     document.title = "Portfolio - Callum Quigley";
   }
-  
+  componentWillMount(){
+
+    this.buildTechnologyList();
+  }
+
   render() {
+//You must use window.$ or $ will be undefined
+window.$(document).ready(function() {
+  window.$('.modal').modal();
+});
+
     return (
       <div className="project-container">
+      <div className="project-filter-tab"><div className="project-filter-tab-label valign-wrapper center-align"><i className="material-icons">arrow_drop_down</i>Filter</div><div className="project-filter-tab-details">
+      <Row>
+        <h5>Filter By:</h5>
+        <Input placeholder=""  label="Title contains (comma seperated values)" />
+    <Input placeholder=""  label="Description contains (comma seperated values)" />
+    {this.state.UniqueTechnology.forEach(function(item){
+return  <Input name='group1' type='checkbox' value={item} label={item} className='filled-in' defaultChecked='checked' />
+
+    })}
+   
+  
+</Row>
+      </div></div>
         <div className="row no-padding pos-relative">
           <div className="col s1"></div>
           <div className="col s10">

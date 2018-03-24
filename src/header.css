@@ -20,8 +20,8 @@ nav{
     border-bottom: 1px solid rgba(0,0,0,0.02);
 }
 
-.active{
-  background-color: rgba(0,0,0,0.1);
+a.active{
+  background-color: rgba(0,0,0,0.1) !important;
 }
 .nav-bar-right{
     display: flex;

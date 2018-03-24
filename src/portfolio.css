@@ -86,6 +86,36 @@ li.waves-effect > a > i{
     width: 0px;
     opacity: 0;
     overflow: hidden;
+}
 
+.project-filter-tab > div{
 
+    display: inline-block;
+}
+.project-filter-tab{
+    z-index: 99;
+    position: fixed;
+    top: 200px;
+}
+.project-filter-tab-label{
+    font-size: 25px;
+    transform: rotate(90deg);
+    padding: 15px 20px 10px 10px;
+
+    color: white;
+
+    border-radius: 0px 0px 20px 20px;
+    background:  var(--main-colour);
+    cursor: pointer;
+}
+.project-filter-tab-label i{
+    font-size: 30px;
+}
+.project-filter-tab-details{
+    padding-left: 24px;
+    padding-right: 24px;
+    padding-top: 16px !important;
+    padding-bottom: 16px !important;
+    border: 1px solid rgba(0,0,0,0.2);
+    background: white;
 }
