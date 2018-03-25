@@ -4,13 +4,14 @@ import ProjectContainer from './ProjectContainer';
 import Pagination from'./pagination';
 import { CSSTransitionGroup } from 'react-transition-group';
 import ProjectView from './projectView';
-import {Row, Input} from 'react-materialize' 
+import {Input} from 'react-materialize';
 
 class Portfolio extends Component {  
   
   constructor() {
     super();
     this.state = {
+      toggleFilterPopup : false,
       UniqueTechnology : [],
       pageNo : 1,
       itemsPerPage : 8, //the number of items that can be displayed on the page at once
@@ -289,6 +290,7 @@ class Portfolio extends Component {
 
   minimise(){
     this.setState({ togglePopup:"close"});
+    
   }
 
   expand(value){
@@ -335,9 +337,13 @@ class Portfolio extends Component {
   componentDidMount() {
     document.title = "Portfolio - Callum Quigley";
   }
-  componentWillMount(){
 
+  componentWillMount(){
     this.buildTechnologyList();
+  }
+
+  toggleFilterButton(){
+    this.state.toggleFilterPopup === true ? this.setState({toggleFilterPopup : false}) : this.setState({toggleFilterPopup : true});
   }
 
   render() {
@@ -348,19 +354,7 @@ window.$(document).ready(function() {
 
     return (
       <div className="project-container">
-      <div className="project-filter-tab"><div className="project-filter-tab-label valign-wrapper center-align"><i className="material-icons">arrow_drop_down</i>Filter</div><div className="project-filter-tab-details">
-      <Row>
-        <h5>Filter By:</h5>
-        <Input placeholder=""  label="Title contains (comma seperated values)" />
-    <Input placeholder=""  label="Description contains (comma seperated values)" />
-    {this.state.UniqueTechnology.forEach(function(item){
-return  <Input name='group1' type='checkbox' value={item} label={item} className='filled-in' defaultChecked='checked' />
-
-    })}
-   
-  
-</Row>
-      </div></div>
+      
         <div className="row no-padding pos-relative">
           <div className="col s1"></div>
           <div className="col s10">
@@ -374,8 +368,20 @@ return  <Input name='group1' type='checkbox' value={item} label={item} className
             </div>
           </div>
         </div>
-        <div className="col s1"></div>
-        <div className="row">
+        <div className="col s1"></div>   
+        <div className="row">                     
+        <div className={this.state.toggleFilterPopup === true ? "project-filter-tab project-filter-tab-open":"project-filter-tab"}><div  onClick={() => {this.toggleFilterButton()}} className="project-filter-tab-label valign-wrapper center-align"><i className={this.state.toggleFilterPopup === true ? "filter-arrow rotated-icon material-icons": "material-icons filter-arrow"}>arrow_drop_down</i>Filter</div><div className="project-filter-tab-details">
+      
+        <h5>Filter By:</h5>
+        
+        <Input placeholder=""  label="Title" />
+        
+  
+    <Input placeholder=""  label="Description" />
+    <Input placeholder=""  label="Language" />
+    <a className="waves-effect waves-light btn"><i className="material-icons right">cloud</i>Apply Filters</a>
+  
+      </div></div>
           <div className="col s1"></div>
             <div className="col s10 pos-relative">
               <div className="row">

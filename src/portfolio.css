@@ -95,15 +95,23 @@ li.waves-effect > a > i{
 .project-filter-tab{
     z-index: 99;
     position: fixed;
-    top: 200px;
+    right: 0px;
+    transition: 0.5s ease all;
 }
+
+.project-filter-tab-open{
+    right: 260px;
+}
+
 .project-filter-tab-label{
+    position: relative;
+    top: 28px;
+    left: 28px;
     font-size: 25px;
     transform: rotate(90deg);
-    padding: 15px 20px 10px 10px;
+    padding: 10px 20px 10px 10px;
 
     color: white;
-
     border-radius: 0px 0px 20px 20px;
     background:  var(--main-colour);
     cursor: pointer;
@@ -112,10 +120,25 @@ li.waves-effect > a > i{
     font-size: 30px;
 }
 .project-filter-tab-details{
+    position: absolute;
+    width: 260px;
     padding-left: 24px;
     padding-right: 24px;
     padding-top: 16px !important;
     padding-bottom: 16px !important;
     border: 1px solid rgba(0,0,0,0.2);
     background: white;
+}
+.project-filter-tab-details a {
+    margin-top: 20px;
+    width: 100%;
+}
+
+.filter-arrow{
+    transition: 0.5s ease all;
+}
+
+.rotated-icon{
+    transform: rotate(180deg);
+    transition: 0.5s ease all;
 }
