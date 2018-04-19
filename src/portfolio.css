@@ -138,6 +138,7 @@ li.waves-effect > a > i{
     transition: 0.5s ease all;
 }
 
+
 .rotated-icon{
     transform: rotate(180deg);
     transition: 0.5s ease all;
