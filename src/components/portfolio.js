@@ -406,7 +406,6 @@ window.$(document).ready(function() {
 
     return (
       <div className="project-container">
-      
         <div className="row no-padding pos-relative">
           <div className="col s1"></div>
           <div className="col s10">
@@ -414,25 +413,28 @@ window.$(document).ready(function() {
               <div className="col s1"><h1>Projects</h1></div>
               <div className= "col s10"></div>
               <div className="col s1 project-counter">
-
-                showing {(this.state.itemsPerPage*this.state.pageNo- this.state.itemsPerPage)+1}-{this.state.sortedProjects.length >this.state.itemsPerPage*this.state.pageNo ? this.state.itemsPerPage*this.state.pageNo : this.state.sortedProjects.length} of {this.state.sortedProjects.length}
+                showing {(this.state.itemsPerPage * this.state.pageNo - this.state.itemsPerPage) + 1} - {this.state.sortedProjects.length > this.state.itemsPerPage * this.state.pageNo ? this.state.itemsPerPage * this.state.pageNo : this.state.sortedProjects.length} of {this.state.sortedProjects.length}
               </div>
             </div>
           </div>
         </div>
         <div className="col s1"></div>   
         <div className="row">                     
-        <div className={this.state.toggleFilterPopup === true ? "project-filter-tab project-filter-tab-open":"project-filter-tab"}><div  onClick={() => {this.toggleFilterButton()}} className="project-filter-tab-label valign-wrapper center-align"><i className={this.state.toggleFilterPopup === true ? "filter-arrow rotated-icon material-icons": "material-icons filter-arrow"}>arrow_drop_down</i>Filter</div><div className="project-filter-tab-details">
-      
-        <h5>Filter By:</h5>
-        
-        <Input placeholder=""  label="Title" id="filterTitle" onKeyPress={event => {this.checkIfEnter(event)}} onChange={evt => {this.updateTitleFilter(evt)}} value={this.state.titleFilter}/>
-    <Input placeholder=""  label="Description" id="filterDescription" onKeyPress={event => {this.checkIfEnter(event)}} onChange={evt => {this.updateDescriptionFilter(evt)}} value={this.state.descriptionFilter}/>
-    <Input placeholder=""  label="Language" id="filterLanguage" onKeyPress={event => {this.checkIfEnter(event)}} onChange={evt => {this.updateTechnologyFilter(evt)} } value={this.state.technologyFilter}/>
-    <a className="waves-effect waves-light btn"  onClick={() => {this.applyFilter()}}><i className="material-icons right">filter_list</i>Apply Filters</a>
-
-  
-      </div></div>
+          <div className={this.state.toggleFilterPopup === true ? "project-filter-tab project-filter-tab-open":"project-filter-tab"}>
+            <div  onClick={() => {this.toggleFilterButton()}} className="project-filter-tab-label valign-wrapper center-align">
+              <i className={this.state.toggleFilterPopup === true ? "filter-arrow rotated-icon material-icons": "material-icons filter-arrow"}>
+                arrow_drop_down
+              </i>
+              Filter
+            </div>
+            <div className="project-filter-tab-details">
+              <h5>Filter By:</h5>
+              <Input placeholder=""  label="Title" id="filterTitle" onKeyPress={event => {this.checkIfEnter(event)}} onChange={evt => {this.updateTitleFilter(evt)}} value={this.state.titleFilter}/>
+              <Input placeholder=""  label="Description" id="filterDescription" onKeyPress={event => {this.checkIfEnter(event)}} onChange={evt => {this.updateDescriptionFilter(evt)}} value={this.state.descriptionFilter}/>
+              <Input placeholder=""  label="Language" id="filterLanguage" onKeyPress={event => {this.checkIfEnter(event)}} onChange={evt => {this.updateTechnologyFilter(evt)} } value={this.state.technologyFilter}/>
+              <a className="waves-effect waves-light btn"  onClick={() => {this.applyFilter()}}><i className="material-icons right">filter_list</i>Apply Filters</a>
+            </div>
+          </div>
           <div className="col s1"></div>
             <div className="col s10 pos-relative">
               <div className="row">

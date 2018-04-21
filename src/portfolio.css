@@ -19,7 +19,7 @@
 
 .project-counter{
     font-size: 20px;
-    color: rgba(0,0,0,0.5);
+    color: rgba(0,0,0,0.25);
     margin-bottom: 10px;
     bottom: 0px;
     right: 0px !important;
@@ -49,6 +49,7 @@ li.waves-effect > a > i{
     padding-top: 16px !important;
     padding-bottom: 16px !important;
 }
+
 .example-enter {
     opacity: 0.01;
 }
@@ -89,9 +90,9 @@ li.waves-effect > a > i{
 }
 
 .project-filter-tab > div{
-
     display: inline-block;
 }
+
 .project-filter-tab{
     z-index: 99;
     position: fixed;
@@ -110,15 +111,16 @@ li.waves-effect > a > i{
     font-size: 25px;
     transform: rotate(90deg);
     padding: 0px 20px 10px 0px;
-
     color: white;
     border-radius: 0px 0px 20px 20px;
     background:  var(--main-colour);
     cursor: pointer;
 }
+
 .project-filter-tab-label i{
     font-size: 30px;
 }
+
 .project-filter-tab-details{
     position: absolute;
     width: 260px;
@@ -129,6 +131,7 @@ li.waves-effect > a > i{
     border: 1px solid rgba(0,0,0,0.2);
     background: white;
 }
+
 .project-filter-tab-details a {
     margin-top: 20px;
     width: 100%;
