@@ -97,6 +97,7 @@ class TechnologyItem extends Component {
       return techNames[stringName.toUpperCase()];
     }
     else{
+      console.error("Unrecognised icon name:",stringName);
       return techNames.DEFAULT;
     }
   }
