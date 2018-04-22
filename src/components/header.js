@@ -17,8 +17,9 @@ class Header extends Component {
             <NavLink to="/about" activeClassName="active">About</NavLink>
             <NavLink to="/portfolio" activeClassName="active">Portfolio</NavLink>
             <NavLink to="/cv" activeClassName="active">CV</NavLink>
-            <NavLink to="/blog" activeClassName="active">Blog</NavLink>
             <NavLink to="/contact" activeClassName="active">Contact</NavLink>    
+            <NavLink to="/blog" activeClassName="active">Blog</NavLink>
+           
           </div>
         </div>
     

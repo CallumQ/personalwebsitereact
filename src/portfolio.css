@@ -122,6 +122,10 @@ li.waves-effect > a > i{
     padding-bottom: 5px;
 }
 
+.filter-tab-helpertext{
+    color: rgba(0,0,0,0.4);
+    font-size: 12px;
+}
 .project-filter-tab-details{
     position: absolute;
     width: 260px;

@@ -441,6 +441,7 @@ class Portfolio extends Component{
             </div>
             <div className="project-filter-tab-details">
               <h5>Filter By:</h5>
+              <div className="filter-tab-helpertext">Enter comma seperated values (CSV)</div>
               <Input placeholder=""  label="Title" id="filterTitle" onKeyPress={event => {this.checkIfEnter(event)}} onChange={evt => {this.updateTitleFilter(evt)}} value={this.state.titleFilter}/>
               <Input placeholder=""  label="Description" id="filterDescription" onKeyPress={event => {this.checkIfEnter(event)}} onChange={evt => {this.updateDescriptionFilter(evt)}} value={this.state.descriptionFilter}/>
               <Input placeholder=""  label="Language" id="filterLanguage" onKeyPress={event => {this.checkIfEnter(event)}} onChange={evt => {this.updateTechnologyFilter(evt)} } value={this.state.technologyFilter}/>
