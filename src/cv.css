@@ -1,0 +1,73 @@
+
+.outer-button{
+    position: relative;
+    margin-top: 32px;
+    margin-bottom: 32px;
+    font-size: 1.1em;
+    display: inline-block;
+    color: #353439;
+    transition: all 0.2s ease-out;
+    z-index: 100;
+    background: transparent;
+    overflow: hidden;
+}
+.button-link{
+    position: relative;
+    
+
+}
+.inner-button{
+    transition: all 0.2s linear;
+}
+.buttonText{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    border: 2px solid #353439;
+    font-size: 1.1em;
+    padding: 15px 30px;
+    transition: all 0.2s linear;
+}
+
+.button-link:hover .buttonText{
+
+    color: #edeeef;
+    transition: all 0.2s linear;
+}
+
+.button-link:hover .buttonText {
+
+    transition: all 0.2s linear;
+    background: #353439;
+}
+.technology-experience, .related-experience{
+    padding-top: 96px;
+    font-family: 'Raleway', sans-serif;
+    padding-bottom: 96px;
+    font-size:1.5em;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+    border-top: 1px solid rgba(0, 0, 0, 0.03)
+}
+.technology-experience{
+    background-color: #edeeef;
+}
+
+.offer-seperator {
+    border-right: 1px solid rgba(0, 0, 0, 0.2);
+   
+}
+.list-item-seperator{
+    margin-right: 30px;
+    border-right: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.offer-header{
+    font-size: 1em;
+}
+.skills-list li{
+    list-style-type: disc !important;
+    list-style-position: inside;
+    color: #6b6b6b;
+    font-size: 0.8em;
+
+}
+
