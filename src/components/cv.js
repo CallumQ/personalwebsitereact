@@ -30,12 +30,30 @@ class CV extends Component {
                 <div class="col s1"></div>
                 <div class="col s4 offer-header">Experienced
                   <ul className="skills-list">
-                    <li className="list-item-seperator">Multi-threaded applications</li>
+                    <li className="list-item-seperator">C#</li>
+                    <li className="list-item-seperator">Java (JUnit 4)</li>
+                    <li className="list-item-seperator">Python</li>
+                    <li className="list-item-seperator">Javascript</li>
+                    <li className="list-item-seperator">React</li>
+                    <li className="list-item-seperator">HTML5</li>
+                    <li className="list-item-seperator">CSS3</li>
+                    <li className="list-item-seperator">MySQL</li>
+                    <li className="list-item-seperator">MongoDB</li>
+                    <li className="list-item-seperator">PHP</li>
+                    <li className="list-item-seperator">Foundation 6</li>
+                    <li className="list-item-seperator">Selenium</li>
+                    <li className="list-item-seperator">Agile Development (Scrum, Kanban)</li>
+                    <li className="list-item-seperator">Version Control (Git)</li>
+
                   </ul>
                 </div>
                 <div class="col s4 offer-header">Some experience
                   <ul className="skills-list">
-                    <li>Item 1</li>
+                    <li>C</li>
+                    <li>C++</li>
+                    <li>Node.js</li>
+                    <li>Angular</li>
+                    <li>SPARK ADA</li>
                   </ul>
                 </div>
               </div>
