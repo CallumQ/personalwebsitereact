@@ -6,9 +6,9 @@ import { CSSTransitionGroup } from 'react-transition-group';
 import ProjectView from './projectView';
 import {Input} from 'react-materialize';
 
-class Portfolio extends Component {  
+class Portfolio extends Component{  
   
-  constructor() {
+  constructor(){
     super();
     this.state = {
       toggleFilterPopup : false,
@@ -301,7 +301,7 @@ class Portfolio extends Component {
 
   //triggers when the ">" button is pressed.
   //increments the page counter and updates the projects to be displayed
-  pageUp() {
+  pageUp(){
     if (this.state.pageNo < this.state.sortedProjects.length / this.state.itemsPerPage){
       this.setState((prevState) => {return {pageNo: prevState.pageNo + 1}})
       this.updateProjects();
@@ -310,7 +310,7 @@ class Portfolio extends Component {
 
   //triggers when the "<" button is pressed.
   //decrements the page counter and updates the projects to be displayed
-  pageDown() {
+  pageDown(){
     if(this.state.pageNo > 1){
       this.setState((prevState) => {return {pageNo: prevState.pageNo - 1}})
       this.updateProjects();    
@@ -337,7 +337,7 @@ class Portfolio extends Component {
     this.setState({UniqueTechnology : array});
   }
 
-  componentDidMount() {
+  componentDidMount(){
     document.title = "Portfolio - Callum Quigley";
   }
 
@@ -346,6 +346,7 @@ class Portfolio extends Component {
     this.applyFilter();
   }
 
+  //toggles the filter tabs visibility
   toggleFilterButton(){
     this.state.toggleFilterPopup === true ? this.setState({toggleFilterPopup : false}) : this.setState({toggleFilterPopup : true});
   }
@@ -355,30 +356,40 @@ class Portfolio extends Component {
     let projectList = new Set();
 
     for(let project of this.state.projects){
+      
       for (let filterTitle of ( (this.state.titleFilter+",").split(",")).filter(Boolean)){
-        if(project.name.toUpperCase().includes(filterTitle.toUpperCase())){
-          projectList.add(project);
+        if(!(projectList.has(project))){      
+          if(project.name.toUpperCase().includes(filterTitle.toUpperCase())){
+            projectList.add(project);  
+          }
         }
       }
       for (let filterDescription of ( (this.state.descriptionFilter+",").split(",")).filter(Boolean)){
-        if(project.description.toUpperCase().includes(filterDescription.toUpperCase()) || project.summary.toUpperCase().includes(filterDescription.toUpperCase())){
-          projectList.add(project);
+        if(!(projectList.has(project))){
+          if(project.description.toUpperCase().includes(filterDescription.toUpperCase()) || project.summary.toUpperCase().includes(filterDescription.toUpperCase())){
+            projectList.add(project);
+          }
         }
       }
       for (let filterTechnology of ( (this.state.technologyFilter+",").split(",")).filter(Boolean)){
-        if(project.technology.includes(filterTechnology.toUpperCase())){
-          projectList.add(project);
+        if(!(projectList.has(project))){
+          if(project.technology.includes(filterTechnology.toUpperCase())){
+            projectList.add(project);
+          }
         }
       }
     }
+    
+    //resets the page number
     this.setState({pageNo:1})
+    
     if (projectList.size === 0){
       this.setState({sortedProjects : this.state.projects});
     }
     else{
       this.setState({sortedProjects : Array.from(projectList)});
+      this.toggleFilterButton();
     }
-    
   }
   
   updateTitleFilter(evt){
@@ -392,6 +403,7 @@ class Portfolio extends Component {
   updateTechnologyFilter(evt){
     this.setState({ technologyFilter : evt.target.value});
   }
+
   checkIfEnter(event){
     if(event.key ==='Enter'){
       this.applyFilter();
@@ -399,10 +411,10 @@ class Portfolio extends Component {
   }
   
   render() {
-//You must use window.$ or $ will be undefined
-window.$(document).ready(function() {
-  window.$('.modal').modal();
-});
+    //You must use window.$ or $ will be undefined
+    window.$(document).ready(function() {
+      window.$('.modal').modal();
+    });
 
     return (
       <div className="project-container">
@@ -440,7 +452,7 @@ window.$(document).ready(function() {
               <div className="row">
               <CSSTransitionGroup  transitionName="example" transitionAppear={true} transitionAppearTimeout={500} transitionEnter={false} transitionLeave={false}>
                 <ProjectContainer projects={this.updateProjects()} expand={this.expand.bind(this)}/>      
-                </CSSTransitionGroup>       
+              </CSSTransitionGroup>       
               </div>  
             </div>
             <div className="col s1"></div>  
