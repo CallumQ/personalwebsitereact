@@ -1,35 +1,67 @@
 :root {
-    --main-colour: #014c8f;   
-
+    --main-colour: rgb(0, 139, 139);   
+    --contrast-colour:rgb(1, 148, 148);
 }
-
-
 body, html {
     height: 100%;
+    background: #f6f6f6;
 }
   
 .website-logo span svg{
     margin-top: 6px;
     margin-left: 6px;
-    height: 50px;    
+    filter: opacity(0.2);
+    width: 100px;
+    transition: 0.6s ease all;
+    
+}
+.website-logo span svg:hover{
+    filter: opacity(0.9);
 }
 
-nav{   
+.nav-bar{
     position: relative;
-    background: var(--main-colour);
+    padding-top: 20px;
+    width: 100%;
+    background: rgba(28, 28, 28, 0.8);
     border-bottom: 1px solid rgba(0,0,0,0.02);
+    margin-bottom: 40px;
 }
 
-.active{
-  background-color: rgba(0,0,0,0.1);
-}
-.nav-bar-right{
-    display: flex;
+
+.menu{padding-bottom: 10px;}
+.menu a {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 300;
+    color: #999;
+    font-size: 1.3em;
+    transition: color 0.6s;
+    display: inline-block;
+    padding: 0.7rem 1rem;
+    line-height: 1.2;
 }
 
-.nav-bar-right a {
-    font-size: 18px;
-    color:white;
-    transition: 0.3s ease all;
+.menu a:after{
+    content: '';
+    display: block;
+    height: 2px;
+    width: 0;
+    background: transparent;
+    -webkit-transition: all 600ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transition: all 600ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
+.menu a:hover{
+    color: white;
+}
+ .active{
+    color: white !important;
+}
+.active:after{
+    background:  var(--main-colour) !important;
+    width: 100% !important;
+}
+.menu a:hover:after{
+    background:  var(--main-colour);
+    width: 100%;
 
+}

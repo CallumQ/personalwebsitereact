@@ -1,10 +1,14 @@
 .mainContainer{
-    height: 95vh;
+    height: 70vh;
+    position: fixed;
+    width: 100%;
 }
 
 .mainContainer-centerSection{
-
+    padding: 30px;
+    background: rgba(28, 28, 28, 0.137);
     margin: 0 auto;
+    border: 4px solid var(--main-colour);
 }
 
 * { 
@@ -22,7 +26,7 @@
 
 .linksSection a {
     margin-top: 20px;
-    color: black;
+    color: var(--main-colour);
     transition: 0.3s ease all;
 }
 

@@ -329,7 +329,7 @@ class Portfolio extends Component {
           <div className="col s1"></div>
           <div className="col s10">
             <div className="row no-padding pos-relative">
-              <div className="col s1"><h1>Projects</h1></div>
+
               <div className= "col s10"></div>
               <div className="col s1 project-counter">
 
