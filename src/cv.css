@@ -1,4 +1,3 @@
-
 .outer-button{
     position: relative;
     margin-top: 32px;
@@ -11,14 +10,15 @@
     background: transparent;
     overflow: hidden;
 }
-.button-link{
-    position: relative;
-    
 
+.button-link{
+    position: relative;    
 }
+
 .inner-button{
     transition: all 0.2s linear;
 }
+
 .buttonText{
     font-family: 'Poppins', sans-serif;
     margin: 0;
@@ -29,16 +29,15 @@
 }
 
 .button-link:hover .buttonText{
-
     color: #edeeef;
     transition: all 0.2s linear;
 }
 
 .button-link:hover .buttonText {
-
     transition: all 0.2s linear;
     background: #353439;
 }
+
 .technology-experience, .related-experience{
     padding-top: 96px;
     font-family: 'Raleway', sans-serif;
@@ -47,6 +46,7 @@
     border-bottom: 1px solid rgba(0, 0, 0, 0.15);
     border-top: 1px solid rgba(0, 0, 0, 0.03)
 }
+
 .technology-experience{
     background-color: #edeeef;
 }
@@ -55,6 +55,7 @@
     border-right: 1px solid rgba(0, 0, 0, 0.2);
    
 }
+
 .list-item-seperator{
     margin-right: 30px;
     border-right: 1px solid rgba(0, 0, 0, 0.2);
@@ -63,12 +64,19 @@
 .offer-header{
     font-size: 1em;
 }
+
 .offer-details, .offer-date{
     font-size:0.8em; color: #6b6b6b;
 }
+
 .offer-date{
     padding-bottom: 10px;
 }
+
+.offer-item{
+    padding-bottom: 40px;
+}
+
 .skills-list li{
     list-style-type: disc !important;
     list-style-position: inside;

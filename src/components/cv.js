@@ -44,7 +44,6 @@ class CV extends Component {
                     <li className="list-item-seperator">Selenium</li>
                     <li className="list-item-seperator">Agile Development (Scrum, Kanban)</li>
                     <li className="list-item-seperator">Version Control (Git)</li>
-
                   </ul>
                 </div>
                 <div class="col s4 offer-header">Some experience
@@ -66,12 +65,39 @@ class CV extends Component {
             <div class="col s3"></div>
             <div class="col s6">
               <div class="row left-align">
-                <div class="col s3 offer-seperator offer-header">Technologies / Skills</div>
+                <div class="col s3 offer-seperator offer-header">Relevant Experience</div>
                 <div class="col s1"></div>
                 <div class="col s8 offer-header">
-                  <div className="offer-header">Lab Assistant, Heriot-Watt University</div>
-                  <div className="offer-date">12th September 2016 - 28th November 2016</div>
-                  <div className="offer-details">I provided support to the new 1st year students on a course called praxis, which aims to teach the new students time management skills, study skills, methods of research, and report writing. I also helped teach them the basics of shell navigation and BASH scripting</div>
+                  <div className="offer-item">
+                    <div className="offer-header">Lab Assistant, Heriot-Watt University</div>
+                    <div className="offer-date">12th September 2016 - 28th November 2016</div>
+                    <div className="offer-details">I provided support to the new 1st year students on a course called praxis, which aims to teach the new students time management skills, study skills, methods of research, and report writing. I also helped teach them the basics of shell navigation and BASH scripting</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col s3"></div>
+          </div>
+        </div>
+
+         <div className="technology-experience center-align">
+          <div class="row"> 
+            <div class="col s3"></div>
+            <div class="col s6">
+              <div class="row left-align">
+                <div class="col s3 offer-seperator offer-header">Education</div>
+                <div class="col s1"></div>
+                <div class="col s8 offer-header">
+                  <div className="offer-item">
+                    <div className="offer-header">BSc (Hons) Computer Systems, Heriot-Watt University</div>
+                    <div className="offer-date">12th September 2015 - 21st June 2017, 1st Class Honours</div>
+                    <div className="offer-details">some description</div>
+                  </div>
+                  <div className="offer-item">
+                    <div className="offer-header">BSc (Hons) Computer Systems, Heriot-Watt University</div>
+                    <div className="offer-date">12th September 2015 - 21st June 2017, 1st Class Honours</div>
+                    <div className="offer-details">some description</div>
+                  </div>
                 </div>
               </div>
             </div>
