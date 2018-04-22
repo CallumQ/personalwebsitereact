@@ -356,7 +356,7 @@ class Portfolio extends Component {
 
     for(let project of this.state.projects){
       for (let filterTitle of ( (this.state.titleFilter+",").split(",")).filter(Boolean)){
-        if(project.name.toUpperCase().C(filterTitle.toUpperCase())){
+        if(project.name.toUpperCase().includes(filterTitle.toUpperCase())){
           projectList.add(project);
         }
       }
