@@ -19,7 +19,7 @@
 
 .project-counter{
     font-size: 20px;
-    color: rgba(0,0,0,0.5);
+    color: rgba(0,0,0,0.25);
     margin-bottom: 10px;
     bottom: 0px;
     right: 0px !important;
@@ -49,6 +49,7 @@ li.waves-effect > a > i{
     padding-top: 16px !important;
     padding-bottom: 16px !important;
 }
+
 .example-enter {
     opacity: 0.01;
 }
@@ -72,13 +73,76 @@ li.waves-effect > a > i{
     width: 100%;
 }
 
-.projectExpanded,.projectMinimised{
+.projectExpanded, .projectMinimised{
     position: fixed;
     background: rgba(0, 0, 0, 0.5);
     top: 0px;
     z-index: 100;
+    opacity: 1;
+    transition: 0.2s ease opacity;
 }
 
 .projectMinimised{
-    display: none;
+    height: 0px;
+    width: 0px;
+    opacity: 0;
+    overflow: hidden;
+}
+
+.project-filter-tab > div{
+    display: inline-block;
+}
+
+.project-filter-tab{
+    z-index: 99;
+    position: fixed;
+    right: 0px;
+    transition: 0.5s ease all;
+}
+
+.project-filter-tab-open{
+    right: 260px;
+}
+
+.project-filter-tab-label{
+    position: relative;
+    top: 28px;
+    left: 28px;
+    font-size: 25px;
+    transform: rotate(90deg);
+    padding: 0px 20px 10px 0px;
+    color: white;
+    border-radius: 0px 0px 10px 10px;
+    background:  var(--main-colour);
+    cursor: pointer;
+}
+
+.project-filter-tab-label i{
+    font-size: 30px;
+    padding-bottom: 5px;
+}
+
+.project-filter-tab-details{
+    position: absolute;
+    width: 260px;
+    padding-left: 24px;
+    padding-right: 24px;
+    padding-top: 16px !important;
+    padding-bottom: 16px !important;
+    border: 1px solid rgba(0,0,0,0.2);
+    background: white;
+}
+
+.project-filter-tab-details a {
+    margin-top: 20px;
+    width: 100%;
+}
+
+.filter-arrow{
+    transition: 0.5s ease all;
+}
+
+.rotated-icon{
+    transform: rotate(180deg);
+    transition: 0.5s ease all;
 }

@@ -4,12 +4,18 @@ import ProjectContainer from './ProjectContainer';
 import Pagination from'./pagination';
 import { CSSTransitionGroup } from 'react-transition-group';
 import ProjectView from './projectView';
+import {Input} from 'react-materialize';
 
-class Portfolio extends Component {  
+class Portfolio extends Component{  
   
-  constructor() {
+  constructor(){
     super();
     this.state = {
+      toggleFilterPopup : false,
+      titleFilter : "",
+      descriptionFilter : "",
+      technologyFilter : "",
+      UniqueTechnology : [],
       pageNo : 1,
       itemsPerPage : 8, //the number of items that can be displayed on the page at once
       projects : [
@@ -229,7 +235,7 @@ class Portfolio extends Component {
         {
           id : "e3ead03c5446406594cd1452787df360",
           name :"fourteen",
-          summary : "A simple web browser written in C# which performs HTTP requests.",
+          summary : "A simple web browser written in C# which performs html requests.",
           description : "this is a description",
           previewImage: "http://via.placeholder.com/950x600",
           technology:["C","CPLUSPLUS"],
@@ -245,8 +251,8 @@ class Portfolio extends Component {
         {
           id : "cb3b1bd4d00340d9a2aac2caf34559b2",
           name :"fifteen",
-          summary : "A simple web browser written in C# which performs HTTP requests.",
-          description : "this is a description",
+          summary : "dog",
+          description : "dog",
           previewImage: "http://via.placeholder.com/950x600",
           technology:["REACT","CSS","HTML5","JAVASCRIPT"],
           url: "/this/will/point/to/a/endpoint",
@@ -282,6 +288,7 @@ class Portfolio extends Component {
     this.pageDown = this.pageDown.bind(this);
     this.expand = this.expand.bind(this);
     this.minimise = this.minimise.bind(this);
+
   }
 
   minimise(){
@@ -294,8 +301,8 @@ class Portfolio extends Component {
 
   //triggers when the ">" button is pressed.
   //increments the page counter and updates the projects to be displayed
-  pageUp() {
-    if (this.state.pageNo < this.state.projects.length / this.state.itemsPerPage){
+  pageUp(){
+    if (this.state.pageNo < this.state.sortedProjects.length / this.state.itemsPerPage){
       this.setState((prevState) => {return {pageNo: prevState.pageNo + 1}})
       this.updateProjects();
     }  
@@ -303,7 +310,7 @@ class Portfolio extends Component {
 
   //triggers when the "<" button is pressed.
   //decrements the page counter and updates the projects to be displayed
-  pageDown() {
+  pageDown(){
     if(this.state.pageNo > 1){
       this.setState((prevState) => {return {pageNo: prevState.pageNo - 1}})
       this.updateProjects();    
@@ -315,14 +322,100 @@ class Portfolio extends Component {
   //we then use this to calculate which projects in the project array should be displayed
   updateProjects(){
     let offset = this.state.itemsPerPage*this.state.pageNo;   
-    return this.state.projects.slice(offset- this.state.itemsPerPage,offset);
+    return this.state.sortedProjects.slice(offset- this.state.itemsPerPage,offset);
   }
 
-  componentDidMount() {
+  buildTechnologyList(){
+    var array = [];
+    this.state.projects.forEach(function(project){
+      project.technology.forEach(function(item){
+        if(!array.includes(item)){
+          array.push(item);
+        }
+      });
+    });
+    this.setState({UniqueTechnology : array});
+  }
+
+  componentDidMount(){
     document.title = "Portfolio - Callum Quigley";
+  }
+
+  componentWillMount(){
+    this.buildTechnologyList();
+    this.applyFilter();
+  }
+
+  //toggles the filter tabs visibility
+  toggleFilterButton(){
+    this.state.toggleFilterPopup === true ? this.setState({toggleFilterPopup : false}) : this.setState({toggleFilterPopup : true});
+  }
+
+  //very very sloppy logic, should be refactored
+  applyFilter(){
+    let projectList = new Set();
+
+    for(let project of this.state.projects){
+      
+      for (let filterTitle of ( (this.state.titleFilter+",").split(",")).filter(Boolean)){
+        if(!(projectList.has(project))){      
+          if(project.name.toUpperCase().includes(filterTitle.toUpperCase())){
+            projectList.add(project);  
+          }
+        }
+      }
+      for (let filterDescription of ( (this.state.descriptionFilter+",").split(",")).filter(Boolean)){
+        if(!(projectList.has(project))){
+          if(project.description.toUpperCase().includes(filterDescription.toUpperCase()) || project.summary.toUpperCase().includes(filterDescription.toUpperCase())){
+            projectList.add(project);
+          }
+        }
+      }
+      for (let filterTechnology of ( (this.state.technologyFilter+",").split(",")).filter(Boolean)){
+        if(!(projectList.has(project))){
+          if(project.technology.includes(filterTechnology.toUpperCase())){
+            projectList.add(project);
+          }
+        }
+      }
+    }
+    
+    //resets the page number
+    this.setState({pageNo:1})
+    
+    if (projectList.size === 0){
+      this.setState({sortedProjects : this.state.projects});
+    }
+    else{
+      this.setState({sortedProjects : Array.from(projectList)});
+      this.toggleFilterButton();
+    }
+  }
+  
+  updateTitleFilter(evt){
+    this.setState({titleFilter : evt.target.value});
+  }
+  
+  updateDescriptionFilter(evt){
+    this.setState({descriptionFilter : evt.target.value});
+  }
+  
+  updateTechnologyFilter(evt){
+    this.setState({ technologyFilter : evt.target.value});
+  }
+
+  checkIfEnter(event){
+    if(event.key ==='Enter'){
+      this.applyFilter();
+    }
   }
   
   render() {
+    //You must use window.$ or $ will be undefined
+    window.$(document).ready(function() {
+      window.$('.modal').modal();
+    });
+
     return (
       <div className="project-container">
         <div className="row no-padding pos-relative">
@@ -332,20 +425,34 @@ class Portfolio extends Component {
 
               <div className= "col s10"></div>
               <div className="col s1 project-counter">
-
-                showing {(this.state.itemsPerPage*this.state.pageNo- this.state.itemsPerPage)+1}-{this.state.itemsPerPage*this.state.pageNo} of {this.state.projects.length}
+                showing {(this.state.itemsPerPage * this.state.pageNo - this.state.itemsPerPage) + 1} - {this.state.sortedProjects.length > this.state.itemsPerPage * this.state.pageNo ? this.state.itemsPerPage * this.state.pageNo : this.state.sortedProjects.length} of {this.state.sortedProjects.length}
               </div>
             </div>
           </div>
         </div>
-        <div className="col s1"></div>
-        <div className="row">
+        <div className="col s1"></div>   
+        <div className="row">                     
+          <div className={this.state.toggleFilterPopup === true ? "project-filter-tab project-filter-tab-open":"project-filter-tab"}>
+            <div  onClick={() => {this.toggleFilterButton()}} className="project-filter-tab-label valign-wrapper center-align">
+              <i className={this.state.toggleFilterPopup === true ? "filter-arrow rotated-icon material-icons": "material-icons filter-arrow"}>
+                arrow_drop_down
+              </i>
+              Filter
+            </div>
+            <div className="project-filter-tab-details">
+              <h5>Filter By:</h5>
+              <Input placeholder=""  label="Title" id="filterTitle" onKeyPress={event => {this.checkIfEnter(event)}} onChange={evt => {this.updateTitleFilter(evt)}} value={this.state.titleFilter}/>
+              <Input placeholder=""  label="Description" id="filterDescription" onKeyPress={event => {this.checkIfEnter(event)}} onChange={evt => {this.updateDescriptionFilter(evt)}} value={this.state.descriptionFilter}/>
+              <Input placeholder=""  label="Language" id="filterLanguage" onKeyPress={event => {this.checkIfEnter(event)}} onChange={evt => {this.updateTechnologyFilter(evt)} } value={this.state.technologyFilter}/>
+              <a className="waves-effect waves-light btn"  onClick={() => {this.applyFilter()}}><i className="material-icons right">filter_list</i>Apply Filters</a>
+            </div>
+          </div>
           <div className="col s1"></div>
             <div className="col s10 pos-relative">
               <div className="row">
               <CSSTransitionGroup  transitionName="example" transitionAppear={true} transitionAppearTimeout={500} transitionEnter={false} transitionLeave={false}>
                 <ProjectContainer projects={this.updateProjects()} expand={this.expand.bind(this)}/>      
-                </CSSTransitionGroup>       
+              </CSSTransitionGroup>       
               </div>  
             </div>
             <div className="col s1"></div>  
