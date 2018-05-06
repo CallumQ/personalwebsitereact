@@ -13,6 +13,7 @@
 
 .button-link{
     position: relative;    
+    display: contents;
 }
 
 .inner-button{
@@ -74,7 +75,7 @@
 }
 
 .offer-item{
-    padding-bottom: 40px;
+    padding-bottom: 20px;
 }
 
 .skills-list li{
